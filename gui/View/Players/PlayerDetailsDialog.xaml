@@ -15,7 +15,11 @@
         </Grid.RowDefinitions>
 
         <Border BorderBrush="White" BorderThickness="2" Padding="10" Margin="10">
-            <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
                 <TextBlock Text="{Binding Name}" FontSize="24" FontWeight="Bold" Foreground="White" Margin="0,0,0,10"/>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -45,7 +49,7 @@
                     <TextBlock Text="Rank:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
                     <TextBlock Text="{Binding Rank}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"/>
                 </Grid>
-            </StackPanel>
+            </Grid>
         </Border>
         <Border BorderBrush="White" BorderThickness="2" Padding="10" Margin="10" Grid.Row="1">
             <StackPanel HorizontalAlignment="Left">

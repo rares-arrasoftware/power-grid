@@ -4,14 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:view="clr-namespace:PlayerInput.View.Players"
-             MaxHeight="136">
+             xmlns:helpers="clr-namespace:PlayerInput.Helpers"
+             MaxHeight="136"
+             AllowDrop="True"
+             PreviewMouseLeftButtonDown="OnMouseLeftButtonDown"
+             PreviewMouseMove="OnMouseMove"
+             DragOver="OnDragOver"
+             Drop="OnDrop">
 
     <UserControl.InputBindings>
         <MouseBinding Gesture="LeftDoubleClick" Command="{Binding DoubleClickCommand}" />
     </UserControl.InputBindings>
 
     <Border CornerRadius="10" Margin="10" Background="{StaticResource SecondaryBrush}">
-
         <Grid Height="Auto">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="4*" />

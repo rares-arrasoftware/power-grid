@@ -100,5 +100,24 @@ namespace PlayerInput.ViewModel.Players
                 }
             });
         }
+
+        public void MovePlayer(PlayerPanelViewModel source, PlayerPanelViewModel target)
+        {
+            if (source == null || target == null || source == target || PlayerPanels == null)
+                return;
+
+            int oldIndex = PlayerPanels.IndexOf(source);
+            int newIndex = PlayerPanels.IndexOf(target);
+
+            if (oldIndex < 0 || newIndex < 0 || oldIndex == newIndex)
+                return;
+
+            PlayerPanels.Move(oldIndex, newIndex);
+
+            // Update PlayerManager order
+            var newPlayerOrder = PlayerPanels.Select(p => p.Player).ToList();
+            PlayerManager.Instance.Players = newPlayerOrder;
+        }
+
     }
 }
