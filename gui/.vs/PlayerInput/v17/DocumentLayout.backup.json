@@ -1,0 +1,945 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Work\\github\\power-grid\\PlayerInput\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\helpers\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:helpers\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\helpers\\logindexformatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:helpers\\logindexformatter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\round.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\round.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\phases\\citybuildingphase\\citybuildingphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\phases\\citybuildingphase\\citybuildingphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\phases\\resourcebuyingphase\\buystep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\phases\\resourcebuyingphase\\buystep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\playermanager\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\playermanager\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\playermanager\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\playermanager\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\cardmanager\\cardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\cardmanager\\cardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\phases\\bureaucracyphase\\bureaucracyphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\phases\\bureaucracyphase\\bureaucracyphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\remotemanager\\remotemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\remotemanager\\remotemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\resupplymanager\\resupplymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\resupplymanager\\resupplymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\inputmanager\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\inputmanager\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\phases\\auctionphase\\bidorpassstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\phases\\auctionphase\\bidorpassstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\phases\\auctionphase\\auctionphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\phases\\auctionphase\\auctionphase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\phases\\auctionphase\\auctioncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\phases\\auctionphase\\auctioncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\phases\\auctionphase\\step.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\phases\\auctionphase\\step.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\phases\\auctionphase\\choosepowerplantstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\phases\\auctionphase\\choosepowerplantstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\logpanel\\logpaneldialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\logpanel\\logpaneldialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\logpanel\\logpanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\logpanel\\logpanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\logpanel\\logpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\logpanel\\logpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\logpanel\\logpaneldialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\logpanel\\logpaneldialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\viewmodel\\logpanel\\logpanelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:viewmodel\\logpanel\\logpanelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\cardeditor\\cardeditordialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\cardeditor\\cardeditordialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\cards.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:cards.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\gamephases\\auctionphasecontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\gamephases\\auctionphasecontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\resupply\\resupplypanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\resupply\\resupplypanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\gamephases\\actionpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\gamephases\\actionpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\market\\marketpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\market\\marketpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\viewmodel\\cardeditor\\cardeditorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:viewmodel\\cardeditor\\cardeditorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\viewmodel\\players\\playerdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:viewmodel\\players\\playerdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\players\\playerdetailsdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\players\\playerdetailsdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\viewmodel\\players\\playerpanelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:viewmodel\\players\\playerpanelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\playermanager\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\playermanager\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\viewmodel\\resupply\\resupplyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:viewmodel\\resupply\\resupplyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\viewmodel\\market\\marketviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:viewmodel\\market\\marketviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\viewmodel\\players\\cardimageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:viewmodel\\players\\cardimageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\cardmanager\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\cardmanager\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\gamephases\\marketphasecontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\gamephases\\marketphasecontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\phases\\auctionphase\\throwcardstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\phases\\auctionphase\\throwcardstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\viewmodel\\resupply\\suppliesrowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:viewmodel\\resupply\\suppliesrowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\playermanager\\clock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\playermanager\\clock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\marketmanager\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\marketmanager\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\marketmanager\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\marketmanager\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\marketmanager\\pricetier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\marketmanager\\pricetier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\marketmanager\\marketmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\marketmanager\\marketmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\managers\\infomanager\\infomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\managers\\infomanager\\infomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\model\\phases\\auctionphase\\startauctionstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:model\\phases\\auctionphase\\startauctionstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\viewmodel\\players\\playersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:viewmodel\\players\\playersviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\players\\playerspanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\players\\playerspanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\players\\playerpanelview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\players\\playerpanelview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\players\\clockview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\players\\clockview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|e:\\work\\github\\power-grid\\playerinput\\view\\market\\pricepanelview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2DC601F7-1932-4FA5-8489-91837429B0AA}|PlayerInput.csproj|solutionrelative:view\\market\\pricepanelview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Rares\\AppData\\Local\\SourceServer\\f5bf6e2cd5b329bb660f83b2d9c3ca584d0b062b55489471ade684762e54d705\\src\\libraries\\System.Private.CoreLib\\src\\System\\ThrowHelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Rares\\AppData\\Local\\SourceServer\\8cc86360eda6b1c5bead6529423ca9c3d1dc5f1db45d9aa9ae5c208f409b75e0\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\List.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CityBuildingPhase.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\CityBuildingPhase\\CityBuildingPhase.cs",
+              "RelativeDocumentMoniker": "Model\\Phases\\CityBuildingPhase\\CityBuildingPhase.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\CityBuildingPhase\\CityBuildingPhase.cs",
+              "RelativeToolTip": "Model\\Phases\\CityBuildingPhase\\CityBuildingPhase.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAHMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T16:02:23.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LogPanelDialog.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\LogPanel\\LogPanelDialog.xaml",
+              "RelativeDocumentMoniker": "View\\LogPanel\\LogPanelDialog.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\LogPanel\\LogPanelDialog.xaml",
+              "RelativeToolTip": "View\\LogPanel\\LogPanelDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T14:59:57.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BidOrPassStep.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\BidOrPassStep.cs",
+              "RelativeDocumentMoniker": "Model\\Phases\\AuctionPhase\\BidOrPassStep.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\BidOrPassStep.cs",
+              "RelativeToolTip": "Model\\Phases\\AuctionPhase\\BidOrPassStep.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:19:58.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChoosePowerPlantStep.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\ChoosePowerPlantStep.cs",
+              "RelativeDocumentMoniker": "Model\\Phases\\AuctionPhase\\ChoosePowerPlantStep.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\ChoosePowerPlantStep.cs",
+              "RelativeToolTip": "Model\\Phases\\AuctionPhase\\ChoosePowerPlantStep.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:20:00.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Step.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\Step.cs",
+              "RelativeDocumentMoniker": "Model\\Phases\\AuctionPhase\\Step.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\Step.cs",
+              "RelativeToolTip": "Model\\Phases\\AuctionPhase\\Step.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T14:17:15.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AuctionContext.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\AuctionContext.cs",
+              "RelativeDocumentMoniker": "Model\\Phases\\AuctionPhase\\AuctionContext.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\AuctionContext.cs",
+              "RelativeToolTip": "Model\\Phases\\AuctionPhase\\AuctionContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:19:54.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Round.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Round.cs",
+              "RelativeDocumentMoniker": "Model\\Round.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Round.cs",
+              "RelativeToolTip": "Model\\Round.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T15:01:58.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\GameManager.cs",
+              "RelativeDocumentMoniker": "Model\\GameManager.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\GameManager.cs",
+              "RelativeToolTip": "Model\\GameManager.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAABUAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:10:37.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CardManager.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\CardManager\\CardManager.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\CardManager\\CardManager.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\CardManager\\CardManager.cs",
+              "RelativeToolTip": "Model\\Managers\\CardManager\\CardManager.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAAIYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:22:36.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ResupplyManager.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\ResupplyManager\\ResupplyManager.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\ResupplyManager\\ResupplyManager.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\ResupplyManager\\ResupplyManager.cs",
+              "RelativeToolTip": "Model\\Managers\\ResupplyManager\\ResupplyManager.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:16:49.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Player.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\PlayerManager\\Player.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\PlayerManager\\Player.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\PlayerManager\\Player.cs",
+              "RelativeToolTip": "Model\\Managers\\PlayerManager\\Player.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAHQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:23:07.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LogIndexFormatter.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Helpers\\LogIndexFormatter.cs",
+              "RelativeDocumentMoniker": "Helpers\\LogIndexFormatter.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Helpers\\LogIndexFormatter.cs",
+              "RelativeToolTip": "Helpers\\LogIndexFormatter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T15:44:32.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Helpers\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "Helpers\\RelayCommand.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Helpers\\RelayCommand.cs",
+              "RelativeToolTip": "Helpers\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:40:46.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuctionPhase.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\AuctionPhase.cs",
+              "RelativeDocumentMoniker": "Model\\Phases\\AuctionPhase\\AuctionPhase.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\AuctionPhase.cs",
+              "RelativeToolTip": "Model\\Phases\\AuctionPhase\\AuctionPhase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:19:56.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RemoteManager.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\RemoteManager\\RemoteManager.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\RemoteManager\\RemoteManager.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\RemoteManager\\RemoteManager.cs",
+              "RelativeToolTip": "Model\\Managers\\RemoteManager\\RemoteManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T15:59:23.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BuyStep.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\ResourceBuyingPhase\\BuyStep.cs",
+              "RelativeDocumentMoniker": "Model\\Phases\\ResourceBuyingPhase\\BuyStep.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\ResourceBuyingPhase\\BuyStep.cs",
+              "RelativeToolTip": "Model\\Phases\\ResourceBuyingPhase\\BuyStep.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAFgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T16:06:40.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerManager.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\PlayerManager\\PlayerManager.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\PlayerManager\\PlayerManager.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\PlayerManager\\PlayerManager.cs",
+              "RelativeToolTip": "Model\\Managers\\PlayerManager\\PlayerManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:07:31.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LogPanelDialog.xaml.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\LogPanel\\LogPanelDialog.xaml.cs",
+              "RelativeDocumentMoniker": "View\\LogPanel\\LogPanelDialog.xaml.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\LogPanel\\LogPanelDialog.xaml.cs",
+              "RelativeToolTip": "View\\LogPanel\\LogPanelDialog.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T15:00:36.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BureaucracyPhase.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\BureaucracyPhase\\BureaucracyPhase.cs",
+              "RelativeDocumentMoniker": "Model\\Phases\\BureaucracyPhase\\BureaucracyPhase.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\BureaucracyPhase\\BureaucracyPhase.cs",
+              "RelativeToolTip": "Model\\Phases\\BureaucracyPhase\\BureaucracyPhase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:32:52.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T14:41:24.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LogPanel.xaml.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\LogPanel\\LogPanel.xaml.cs",
+              "RelativeDocumentMoniker": "View\\LogPanel\\LogPanel.xaml.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\LogPanel\\LogPanel.xaml.cs",
+              "RelativeToolTip": "View\\LogPanel\\LogPanel.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T14:43:48.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "InputManager.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\InputManager\\InputManager.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\InputManager\\InputManager.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\InputManager\\InputManager.cs",
+              "RelativeToolTip": "Model\\Managers\\InputManager\\InputManager.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:21:57.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LogPanelViewModel.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\LogPanel\\LogPanelViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\LogPanel\\LogPanelViewModel.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\LogPanel\\LogPanelViewModel.cs",
+              "RelativeToolTip": "ViewModel\\LogPanel\\LogPanelViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T14:35:10.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "cards.json",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\cards.json",
+              "RelativeDocumentMoniker": "cards.json",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\cards.json",
+              "RelativeToolTip": "cards.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-22T14:56:05.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T14:41:27.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MarketPanel.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Market\\MarketPanel.xaml",
+              "RelativeDocumentMoniker": "View\\Market\\MarketPanel.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Market\\MarketPanel.xaml",
+              "RelativeToolTip": "View\\Market\\MarketPanel.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T09:10:01.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LogPanel.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\LogPanel\\LogPanel.xaml",
+              "RelativeDocumentMoniker": "View\\LogPanel\\LogPanel.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\LogPanel\\LogPanel.xaml",
+              "RelativeToolTip": "View\\LogPanel\\LogPanel.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T14:43:22.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PlayerDetailsViewModel.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Players\\PlayerDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Players\\PlayerDetailsViewModel.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Players\\PlayerDetailsViewModel.cs",
+              "RelativeToolTip": "ViewModel\\Players\\PlayerDetailsViewModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwB4AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T09:54:48.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CardEditorViewModel.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\CardEditor\\CardEditorViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\CardEditor\\CardEditorViewModel.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\CardEditor\\CardEditorViewModel.cs",
+              "RelativeToolTip": "ViewModel\\CardEditor\\CardEditorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T14:33:03.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T09:08:26.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CardEditorDialog.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\CardEditor\\CardEditorDialog.xaml",
+              "RelativeDocumentMoniker": "View\\CardEditor\\CardEditorDialog.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\CardEditor\\CardEditorDialog.xaml",
+              "RelativeToolTip": "View\\CardEditor\\CardEditorDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T14:59:42.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T14:56:02.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ResupplyPanel.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Resupply\\ResupplyPanel.xaml",
+              "RelativeDocumentMoniker": "View\\Resupply\\ResupplyPanel.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Resupply\\ResupplyPanel.xaml",
+              "RelativeToolTip": "View\\Resupply\\ResupplyPanel.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T12:14:55.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ResupplyViewModel.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Resupply\\ResupplyViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Resupply\\ResupplyViewModel.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Resupply\\ResupplyViewModel.cs",
+              "RelativeToolTip": "ViewModel\\Resupply\\ResupplyViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:14:41.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ActionPanel.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\GamePhases\\ActionPanel.xaml",
+              "RelativeDocumentMoniker": "View\\GamePhases\\ActionPanel.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\GamePhases\\ActionPanel.xaml",
+              "RelativeToolTip": "View\\GamePhases\\ActionPanel.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T12:05:58.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AuctionPhaseControl.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\GamePhases\\AuctionPhaseControl.xaml",
+              "RelativeDocumentMoniker": "View\\GamePhases\\AuctionPhaseControl.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\GamePhases\\AuctionPhaseControl.xaml",
+              "RelativeToolTip": "View\\GamePhases\\AuctionPhaseControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T14:13:24.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "MarketViewModel.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Market\\MarketViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Market\\MarketViewModel.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Market\\MarketViewModel.cs",
+              "RelativeToolTip": "ViewModel\\Market\\MarketViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T09:10:11.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "PlayerDetailsDialog.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Players\\PlayerDetailsDialog.xaml",
+              "RelativeDocumentMoniker": "View\\Players\\PlayerDetailsDialog.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Players\\PlayerDetailsDialog.xaml",
+              "RelativeToolTip": "View\\Players\\PlayerDetailsDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-21T09:43:13.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "PlayerPanelViewModel.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Players\\PlayerPanelViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Players\\PlayerPanelViewModel.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Players\\PlayerPanelViewModel.cs",
+              "RelativeToolTip": "ViewModel\\Players\\PlayerPanelViewModel.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAEIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:38:46.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "CardImageViewModel.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Players\\CardImageViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Players\\CardImageViewModel.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Players\\CardImageViewModel.cs",
+              "RelativeToolTip": "ViewModel\\Players\\CardImageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:38:33.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Status.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\PlayerManager\\Status.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\PlayerManager\\Status.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\PlayerManager\\Status.cs",
+              "RelativeToolTip": "Model\\Managers\\PlayerManager\\Status.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:45:54.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Resource.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\MarketManager\\Resource.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\MarketManager\\Resource.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\MarketManager\\Resource.cs",
+              "RelativeToolTip": "Model\\Managers\\MarketManager\\Resource.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T09:16:40.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "MarketManager.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\MarketManager\\MarketManager.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\MarketManager\\MarketManager.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\MarketManager\\MarketManager.cs",
+              "RelativeToolTip": "Model\\Managers\\MarketManager\\MarketManager.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAjwIIAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T09:10:57.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "StartAuctionStep.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\StartAuctionStep.cs",
+              "RelativeDocumentMoniker": "Model\\Phases\\AuctionPhase\\StartAuctionStep.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\StartAuctionStep.cs",
+              "RelativeToolTip": "Model\\Phases\\AuctionPhase\\StartAuctionStep.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:20:02.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "PriceTier.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\MarketManager\\PriceTier.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\MarketManager\\PriceTier.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\MarketManager\\PriceTier.cs",
+              "RelativeToolTip": "Model\\Managers\\MarketManager\\PriceTier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:20:05.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Clock.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\PlayerManager\\Clock.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\PlayerManager\\Clock.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\PlayerManager\\Clock.cs",
+              "RelativeToolTip": "Model\\Managers\\PlayerManager\\Clock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:20:10.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "MarketPhaseControl.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\GamePhases\\MarketPhaseControl.xaml",
+              "RelativeDocumentMoniker": "View\\GamePhases\\MarketPhaseControl.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\GamePhases\\MarketPhaseControl.xaml",
+              "RelativeToolTip": "View\\GamePhases\\MarketPhaseControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T12:34:58.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Card.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\CardManager\\Card.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\CardManager\\Card.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\CardManager\\Card.cs",
+              "RelativeToolTip": "Model\\Managers\\CardManager\\Card.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T10:12:11.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "SuppliesRowViewModel.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Resupply\\SuppliesRowViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Resupply\\SuppliesRowViewModel.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Resupply\\SuppliesRowViewModel.cs",
+              "RelativeToolTip": "ViewModel\\Resupply\\SuppliesRowViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:28:27.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ThrowCardStep.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\ThrowCardStep.cs",
+              "RelativeDocumentMoniker": "Model\\Phases\\AuctionPhase\\ThrowCardStep.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Phases\\AuctionPhase\\ThrowCardStep.cs",
+              "RelativeToolTip": "Model\\Phases\\AuctionPhase\\ThrowCardStep.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:33:06.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "InfoManager.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\InfoManager\\InfoManager.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\InfoManager\\InfoManager.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\InfoManager\\InfoManager.cs",
+              "RelativeToolTip": "Model\\Managers\\InfoManager\\InfoManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T12:21:53.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ResourceManager.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\MarketManager\\ResourceManager.cs",
+              "RelativeDocumentMoniker": "Model\\Managers\\MarketManager\\ResourceManager.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\Model\\Managers\\MarketManager\\ResourceManager.cs",
+              "RelativeToolTip": "Model\\Managers\\MarketManager\\ResourceManager.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAACEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T09:12:27.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "PricePanelView.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Market\\PricePanelView.xaml",
+              "RelativeDocumentMoniker": "View\\Market\\PricePanelView.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Market\\PricePanelView.xaml",
+              "RelativeToolTip": "View\\Market\\PricePanelView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T12:06:27.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ClockView.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Players\\ClockView.xaml",
+              "RelativeDocumentMoniker": "View\\Players\\ClockView.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Players\\ClockView.xaml",
+              "RelativeToolTip": "View\\Players\\ClockView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T12:07:05.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "PlayersViewModel.cs",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Players\\PlayersViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Players\\PlayersViewModel.cs",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\ViewModel\\Players\\PlayersViewModel.cs",
+              "RelativeToolTip": "ViewModel\\Players\\PlayersViewModel.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAIwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T09:38:22.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "PlayersPanel.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Players\\PlayersPanel.xaml",
+              "RelativeDocumentMoniker": "View\\Players\\PlayersPanel.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Players\\PlayersPanel.xaml",
+              "RelativeToolTip": "View\\Players\\PlayersPanel.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T10:19:22.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "PlayerPanelView.xaml",
+              "DocumentMoniker": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Players\\PlayerPanelView.xaml",
+              "RelativeDocumentMoniker": "View\\Players\\PlayerPanelView.xaml",
+              "ToolTip": "E:\\Work\\github\\power-grid\\PlayerInput\\View\\Players\\PlayerPanelView.xaml",
+              "RelativeToolTip": "View\\Players\\PlayerPanelView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T10:19:17.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ThrowHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Rares\\AppData\\Local\\SourceServer\\f5bf6e2cd5b329bb660f83b2d9c3ca584d0b062b55489471ade684762e54d705\\src\\libraries\\System.Private.CoreLib\\src\\System\\ThrowHelper.cs",
+              "ToolTip": "C:\\Users\\Rares\\AppData\\Local\\SourceServer\\f5bf6e2cd5b329bb660f83b2d9c3ca584d0b062b55489471ade684762e54d705\\src\\libraries\\System.Private.CoreLib\\src\\System\\ThrowHelper.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAADwv3UAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T09:14:18.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\Users\\Rares\\AppData\\Local\\SourceServer\\8cc86360eda6b1c5bead6529423ca9c3d1dc5f1db45d9aa9ae5c208f409b75e0\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\List.cs",
+              "ToolTip": "C:\\Users\\Rares\\AppData\\Local\\SourceServer\\8cc86360eda6b1c5bead6529423ca9c3d1dc5f1db45d9aa9ae5c208f409b75e0\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\List.cs [Read Only]",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAjwJUAAAAUAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T09:14:18.791Z",
+              "EditorCaption": " [Read Only]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "PowerPlant" : {
+        "id": "04AABBCCDDEE",
+        "type": "PowerPlant",
+        "rank": 5,
+        "plus": true,
+        "endsTurn": false
+    },
+
+    "Event":
+    {
+        "id": "04FFAA332211",
+        "type": "Event",
+        "marketEffect": {
+            "coal": -2,
+            "oil": -1
+        },
+        "level3": false
+    },
+
+    "Utility":
+    {
+        "id": "044433221199",
+        "type": "Utility",
+        "rank": 3,
+        "bureaucrat": true
+    }
+}

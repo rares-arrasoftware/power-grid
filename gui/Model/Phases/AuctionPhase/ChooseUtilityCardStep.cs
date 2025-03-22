@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using PlayerInput.Model.Managers.CardManager;
+using PlayerInput.Model.Managers.InfoManager;
+using PlayerInput.Model.Managers.PlayerManager;
+using PlayerInput.Model.Managers.RemoteManager;
+using Serilog;
+using static PlayerInput.Model.Managers.PlayerManager.Status;
+
+namespace PlayerInput.Model.Phases.AuctionPhase
+{
+    public class ChooseUtilityCardStep(AuctionContext ctx) : Step(ctx)
+    {
+        public override async Task<Step?> Execute()
+        {
+            _ctx.Participants.ForEach(p => PlayerManager.Instance.SetPlayerState(p, PlayerState.Wait));
+            Player player = _ctx.SpecialAuctionRequest.Dequeue();
+            PlayerManager.Instance.SetPlayerState(player, PlayerState.Active);
+
+            UpdateInfo();
+
+            Log.Information("{Player} to act.", player.Name);
+
+            return await _stepCompletion.Task;
+        }
+
+        public override void HandleButtonPressed(Player player, Button btn)
+        {
+            if (btn != Button.BtnB)
+                return;
+
+            if (player is not { Status.State: PlayerState.Active })
+                return;
+
+            _stepCompletion.TrySetResult(new StartAuctionStep(_ctx));
+        }
+
+        public override void HandleNewCardScanned(Card card)
+        {
+            if (card.Type != CardType.Utility)
+                return;
+
+            _ctx.Card = card;
+            _stepCompletion.TrySetResult(new BidOrPassStep(_ctx));
+        }
+
+        public void UpdateInfo()
+        {
+            InfoManager.Instance.PhaseName = "Auction: Choose Special";
+            InfoManager.Instance.PlayerName = _ctx.Participants[0].Name;
+            InfoManager.Instance.OptionA = "N/A";
+            InfoManager.Instance.OptionB = "Pass";
+            InfoManager.Instance.OptionC = "SpecialAuction";
+            InfoManager.Instance.OptionD = "N/A";
+        }
+    }
+}

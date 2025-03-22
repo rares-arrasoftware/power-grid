@@ -1,0 +1,61 @@
+@startuml
+
+[*] --> AuctionPowerPlants
+
+state AuctionPowerPlants {
+    [*] --> ChoosePowerPlant
+}
+
+state AuctionSpecialCard {
+    [*] --> ChooseSpecialCard
+}
+
+state CardBidding {
+    [*] -down-> BidOrPass
+    BidOrPass -down-> SubmitBid : Wait.Count > 1
+    BidOrPass -right-> ThrowCard : Wait.Count == 1 and Player.Cards > 0
+    BidOrPass -left-> AuctionEnd : Wait.Count == 1 and Player.Cards == 0
+    SubmitBid -down-> ResolveWinner : All bids submitted
+    ResolveWinner -down-> ThrowCard : Wait.Count == 1 and Player.Cards > 0
+    ResolveWinner -left-> SubmitBid : Wait.Count > 1
+    ResolveWinner -right-> AuctionEnd : Wait.Count == 1 and Player.Cards == 0
+    ThrowCard -down-> AuctionEnd : RFID Trigger or "B"
+    AuctionEnd -up-> AuctionPowerPlants : Next Player
+}
+
+state BuyResources {
+    [*] -down-> StartResourceBuying
+    StartResourceBuying -down-> PlayerResourceSelection : Reverse order set
+    PlayerResourceSelection -down-> PlayerResourceSelection : Adjust resource quantity ("A" or "B")
+    PlayerResourceSelection -right-> EndTurn : Confirm purchase ("C")
+    EndTurn -up-> PlayerResourceSelection : Next player
+    EndTurn -right-> BuildCities : All players complete
+}
+
+state BuildCities {
+    [*] -down-> StartBuilding
+    StartBuilding -down-> ConfirmBuild : Add/Remove houses ("A" or "B")
+    ConfirmBuild -up-> StartBuilding : Next player
+    ConfirmBuild -down-> Bureaucracy : All players complete
+}
+
+state ReorderPlayers {
+    [*] -down-> Reorder
+    Reorder -down-> Bureaucracy
+}
+
+state Bureaucracy {
+    [*] -down-> MarketUpdates : Resources updated
+    MarketUpdates -down-> ThrowPowerPlants : All players
+    ThrowPowerPlants -down-> Ready : All players
+}
+
+AuctionPowerPlants -down-> CardBidding : RFID Trigger
+AuctionPowerPlants -right-> AuctionPowerPlants : Player Passes("B")
+AuctionPowerPlants -right-> AuctionSpecialCard : Any Player ("C")
+AuctionSpecialCard -down-> CardBidding : RFID Trigger
+CardBidding -down-> ReorderPlayers : No Next Player and Round 1
+ReorderPlayers -down-> BuildCities : Round 1
+BuildCities -up-> ReorderPlayers : No Next Player
+
+@enduml

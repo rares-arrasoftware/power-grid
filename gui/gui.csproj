@@ -1,0 +1,95 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Images\arrow.png" />
+    <None Remove="Assets\Images\Coal.jpg" />
+    <None Remove="Assets\Images\Coal.png" />
+    <None Remove="Assets\Images\coal_empty.png" />
+    <None Remove="Assets\Images\coal_filled.png" />
+    <None Remove="Assets\Images\empty.png" />
+    <None Remove="Assets\Images\Garbage.jpg" />
+    <None Remove="Assets\Images\Garbage.png" />
+    <None Remove="Assets\Images\garbage_empty.png" />
+    <None Remove="Assets\Images\garbage_filled.png" />
+    <None Remove="Assets\Images\market.png" />
+    <None Remove="Assets\Images\Oil.jpg" />
+    <None Remove="Assets\Images\Oil.png" />
+    <None Remove="Assets\Images\oil_empty.png" />
+    <None Remove="Assets\Images\oil_filled.png" />
+    <None Remove="Assets\Images\plant_current.png" />
+    <None Remove="Assets\Images\plant_total.png" />
+    <None Remove="Assets\Images\player.png" />
+    <None Remove="Assets\Images\players.png" />
+    <None Remove="Assets\Images\player_active.png" />
+    <None Remove="Assets\Images\player_active_coin.png" />
+    <None Remove="Assets\Images\player_done.png" />
+    <None Remove="Assets\Images\player_done_coin.png" />
+    <None Remove="Assets\Images\player_ready.png" />
+    <None Remove="Assets\Images\player_ready_coin.png" />
+    <None Remove="Assets\Images\player_wait.png" />
+    <None Remove="Assets\Images\player_wait_coin.png" />
+    <None Remove="Assets\Images\supply.png" />
+    <None Remove="Assets\Images\Uranium.jpg" />
+    <None Remove="Assets\Images\Uranium.png" />
+    <None Remove="Assets\Images\uranium_empty.png" />
+    <None Remove="Assets\Images\uranium_filled.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="4.2.0" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="3.0.1" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="4.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\arrow.png" />
+    <Resource Include="Assets\Images\Coal.jpg" />
+    <Resource Include="Assets\Images\coal.png" />
+    <Resource Include="Assets\Images\coal_empty.png" />
+    <Resource Include="Assets\Images\coal_filled.png" />
+    <Resource Include="Assets\Images\plant_current.png" />
+    <Resource Include="Assets\Images\empty.png" />
+    <Resource Include="Assets\Images\Garbage.jpg" />
+    <Resource Include="Assets\Images\garbage.png" />
+    <Resource Include="Assets\Images\garbage_empty.png" />
+    <Resource Include="Assets\Images\garbage_filled.png" />
+    <Resource Include="Assets\Images\market.png" />
+    <Resource Include="Assets\Images\Oil.jpg" />
+    <Resource Include="Assets\Images\oil.png" />
+    <Resource Include="Assets\Images\oil_empty.png" />
+    <Resource Include="Assets\Images\oil_filled.png" />
+    <Resource Include="Assets\Images\plant_total.png" />
+    <Resource Include="Assets\Images\player.png" />
+    <Resource Include="Assets\Images\players.png" />
+    <Resource Include="Assets\Images\player_active.png" />
+    <Resource Include="Assets\Images\player_active_coin.png" />
+    <Resource Include="Assets\Images\player_done.png" />
+    <Resource Include="Assets\Images\player_done_coin.png" />
+    <Resource Include="Assets\Images\player_ready.png" />
+    <Resource Include="Assets\Images\player_ready_coin.png" />
+    <Resource Include="Assets\Images\player_wait.png" />
+    <Resource Include="Assets\Images\player_wait_coin.png" />
+    <Resource Include="Assets\Images\supply.png" />
+    <Resource Include="Assets\Images\Uranium.jpg" />
+    <Resource Include="Assets\Images\uranium.png" />
+    <Resource Include="Assets\Images\uranium_empty.png" />
+    <Resource Include="Assets\Images\uranium_filled.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Default.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+</Project>

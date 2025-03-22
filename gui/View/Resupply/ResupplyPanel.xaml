@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="PlayerInput.View.Resupply.ResupplyPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:resupply="clr-namespace:PlayerInput.View.Resupply"
+        xmlns:vm="clr-namespace:PlayerInput.ViewModel.Resupply">
+    
+    <UserControl.DataContext>
+        <vm:ResupplyViewModel />
+    </UserControl.DataContext>
+
+    <UserControl.Resources>
+        <ImageBrush x:Key="SupplyBackground" ImageSource="../../Assets/Images/supply.png"/>
+    </UserControl.Resources>
+
+    <Grid Background="{StaticResource SupplyBackground}">
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Reload" Command="{Binding ReloadCommand}" />
+            </ContextMenu>
+        </Grid.ContextMenu>
+
+        <ItemsControl ItemsSource="{Binding SuppliesRows}">
+
+            <!--
+                Define the layout for arranging PricePanels:
+                - Uses a WrapPanel, which arranges items horizontally and wraps them to the next row as needed.
+            -->
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <!--
+                Define the template for each PricePanel:
+                - Each item in the ItemsControl is rendered using the PricePanelView component.
+            -->
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <resupply:SuppliesRowView />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
+
+    </Grid>
+</UserControl>
+

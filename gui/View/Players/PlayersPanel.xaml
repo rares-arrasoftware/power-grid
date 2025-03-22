@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="PlayerInput.View.Players.PlayersPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:players="clr-namespace:PlayerInput.View.Players"
+             xmlns:vm="clr-namespace:PlayerInput.ViewModel.Players">
+
+    <UserControl.DataContext>
+        <vm:PlayersViewModel />
+    </UserControl.DataContext>
+
+    <UserControl.Resources>
+        <ImageBrush x:Key="PlayersBackground" ImageSource="../../Assets/Images/players.png"/>
+    </UserControl.Resources>
+    <Grid Background="{StaticResource PlayersBackground}">
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Reload" Command="{Binding ReloadCommand}"/>
+                <MenuItem Header="Reorder" Command="{Binding ReorderCommand}"/>
+            </ContextMenu>
+        </Grid.ContextMenu>
+        <ItemsControl ItemsSource="{Binding PlayerPanels}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <players:PlayerPanelView />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+
+</UserControl>

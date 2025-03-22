@@ -1,0 +1,55 @@
+﻿<Window x:Class="PlayerInput.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:market="clr-namespace:PlayerInput.View.Market"
+        xmlns:players="clr-namespace:PlayerInput.View.Players"
+        xmlns:resupply="clr-namespace:PlayerInput.View.Resupply"
+        xmlns:info="clr-namespace:PlayerInput.View.Info"
+        xmlns:action="clr-namespace:PlayerInput.View.GamePhases"
+        xmlns:log="clr-namespace:PlayerInput.View.LogPanel"
+        Title="Player Input" Height="200" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*" />
+            <!-- PlayersPanel: 30% -->
+            <ColumnDefinition Width="73*" />
+            <!-- Main Content: 70% -->
+        </Grid.ColumnDefinitions>
+
+        <players:PlayersPanel Grid.Column="0" />
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="52*" />
+                <!-- First row (Info, Action, EventCards, Supply) -->
+                <RowDefinition Height="48*" />
+                <!-- MarketPanel -->
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="35*" />
+                    <!-- InfoPanel -->
+                    <ColumnDefinition Width="35*" />
+                    <!-- ActionPanel -->
+                    <ColumnDefinition Width="30*" />
+                    <!-- SupplyPanel -->
+                </Grid.ColumnDefinitions>
+
+                <info:InfoPanel Grid.Column="0"/>
+                <action:ActionPanel Grid.Column="1" />
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80*" />
+                        <RowDefinition Height="20*" />
+                    </Grid.RowDefinitions>
+
+                    <resupply:ResupplyPanel Grid.Row="0"/>
+                    <log:LogPanel Grid.Row="1"/>
+                </Grid>
+            </Grid>
+
+            <market:MarketPanel Grid.Row="1"/>
+        </Grid>
+    </Grid>
+</Window>
