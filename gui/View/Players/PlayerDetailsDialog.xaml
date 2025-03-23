@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Width="1600" Height="1200" WindowStartupLocation="CenterScreen"
+        Width="1600" Height="1000" WindowStartupLocation="CenterScreen"
         WindowStyle="ToolWindow"
         Background="{StaticResource PrimaryBrush}">
 
@@ -13,16 +13,26 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <Border BorderBrush="White" BorderThickness="2" Padding="10" Margin="10">
+        <Border BorderBrush="White" BorderThickness="2" Padding="10" Margin="10" Grid.Row="0">
+            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                FontSize="40"
+                FontWeight="Bold"
+                Foreground="White"
+                Background="Transparent"
+                BorderThickness="1"
+                Margin="0,0,0,10"
+                IsReadOnlyCaretVisible="True" />
+        </Border>
+        <Border Grid.Row="1" BorderBrush="White" BorderThickness="2" Padding="10" Margin="10">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="{Binding Name}" FontSize="24" FontWeight="Bold" Foreground="White" Margin="0,0,0,10"/>
+
                 <Grid>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
@@ -33,25 +43,38 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
+
                     <TextBlock Text="Cities:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
                     <TextBlock Text="{Binding CitiesCount}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
                     <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10,0,0,0">
-                        <Button Content="-1" Command="{Binding DecreaseCitiesCommand}" Width="200"/>
-                        <Button Content="+1" Command="{Binding IncreaseCitiesCommand}" Width="200"/>
+                        <Button Content="-1" Command="{Binding DecreaseCitiesCommand}" Width="160"/>
+                        <Button Content="+1" Command="{Binding IncreaseCitiesCommand}" Width="160"/>
                     </StackPanel>
-
-                    <TextBlock Text="IsBureaucrat:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                    <TextBlock Text="Bureaucrat:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
                     <TextBlock Text="{Binding IsBureaucrat}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
                     <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10,0,0,0">
-                        <Button Content="Toggle" Command="{Binding ToggleBureaucratCommand}" Width="200"/>
+                        <Button Content="Toggle" Command="{Binding ToggleBureaucratCommand}" Width="200" HorizontalAlignment="Center"/>
                     </StackPanel>
 
-                    <TextBlock Text="Rank:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
-                    <TextBlock Text="{Binding Rank}" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"/>
+                    <TextBlock Text="Remote:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding RemoteId, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+                    <TextBlock Text="Rank:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding Rank}" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <StackPanel>
+                        <Image Source="{Binding ScannedCardImage}"
+                                Width="250" Height="250"
+                                Stretch="UniformToFill"/>
+                        <Button Content="Add"
+                                Command="{Binding DataContext.AddCardCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                CommandParameter="{Binding}"
+                                Width="200"/>
+                    </StackPanel>
                 </Grid>
             </Grid>
         </Border>
-        <Border BorderBrush="White" BorderThickness="2" Padding="10" Margin="10" Grid.Row="1">
+        <Border BorderBrush="White" BorderThickness="2" Padding="10" Margin="10" Grid.Row="2">
             <StackPanel HorizontalAlignment="Left">
                 <ItemsControl ItemsSource="{Binding CardImages}">
                     <ItemsControl.ItemsPanel>
@@ -62,8 +85,8 @@
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Border BorderThickness="1" BorderBrush="Gray" Margin="5" Padding="5">
-                                <StackPanel  Orientation="Horizontal">
-                                    <Image Source="{Binding Image}" Width="300" Height="300" Stretch="UniformToFill"/>
+                                <StackPanel>
+                                    <Image Source="{Binding Image}" Width="250" Height="250" Stretch="UniformToFill"/>
                                     <Button Content="Remove"
                                         Command="{Binding DataContext.RemoveCardCommand, RelativeSource={RelativeSource AncestorType=Window}}"
                                         CommandParameter="{Binding}"
@@ -76,16 +99,6 @@
             </StackPanel>
         </Border>
 
-        <Border BorderBrush="White" BorderThickness="2" Padding="10" Margin="10" Grid.Row="2">
-            <StackPanel Orientation="Horizontal">
-                <Image Source="{Binding ScannedCardImage}"
-                    Width="300" Height="300"
-                    Stretch="Uniform"/>
-                <Button Content="Add"
-                    Command="{Binding DataContext.AddCardCommand, RelativeSource={RelativeSource AncestorType=Window}}"
-                    CommandParameter="{Binding}"
-                    Width="200"/>
-            </StackPanel>
-        </Border>
+       
     </Grid>
 </Window>

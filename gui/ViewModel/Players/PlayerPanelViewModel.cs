@@ -12,12 +12,12 @@ using System.Windows.Input;
 
 namespace PlayerInput.ViewModel.Players
 {
-    class PlayerPanelViewModel
+    class PlayerPanelViewModel : ViewModelBase
     {
         // 1. Properties
         public Player Player { get; }
 
-        public string Name { get; }
+        public string Name => Player.Name;
 
         public StatusBtnViewModel Status { get; }
 
@@ -34,12 +34,18 @@ namespace PlayerInput.ViewModel.Players
         public PlayerPanelViewModel(Player player)
         {
             Player = player;
-            Name = player.Name;
             Status = new StatusBtnViewModel(player.Status);
             Status.StatusClicked += OnStatusClicked;
             Clock = new ClockViewModel(player.Clock);
             Clock.ClockClicked += OnClockClicked;
             DoubleClickCommand = new RelayCommand(_ => OnDoubleClick());
+            Player.PropertyChanged += (s, e) =>
+            {
+                if (e.PropertyName == nameof(Player.Name))
+                {
+                    OnPropertyChanged(nameof(Name));
+                }
+            };
         }
 
         // 4. Private Methods

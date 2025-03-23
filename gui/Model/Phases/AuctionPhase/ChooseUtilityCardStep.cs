@@ -20,7 +20,7 @@ namespace PlayerInput.Model.Phases.AuctionPhase
             Player player = _ctx.SpecialAuctionRequest.Dequeue();
             PlayerManager.Instance.SetPlayerState(player, PlayerState.Active);
 
-            UpdateInfo();
+            UpdateInfo(player);
 
             Log.Information("{Player} to act.", player.Name);
 
@@ -47,10 +47,10 @@ namespace PlayerInput.Model.Phases.AuctionPhase
             _stepCompletion.TrySetResult(new BidOrPassStep(_ctx));
         }
 
-        public void UpdateInfo()
+        public void UpdateInfo(Player player)
         {
             InfoManager.Instance.PhaseName = "Auction: Choose Special";
-            InfoManager.Instance.PlayerName = _ctx.Participants[0].Name;
+            InfoManager.Instance.PlayerName = player.Name;
             InfoManager.Instance.OptionA = "N/A";
             InfoManager.Instance.OptionB = "Pass";
             InfoManager.Instance.OptionC = "SpecialAuction";

@@ -45,14 +45,31 @@ namespace PlayerInput.Model.Managers.RemoteManager
         public void AssignRemote(int remoteId, Player player)
         {
             Log.Information($"{remoteId} was assigned to {player.Name}");
+
+            // Remove old mapping if this remote was already assigned
+            if (_remotes.TryGetValue(remoteId, out var oldPlayer))
+            {
+                _playersRemote.Remove(oldPlayer.Name);
+            }
+
+            // Remove old remote if the player was already assigned a different one
+            if (_playersRemote.TryGetValue(player.Name, out var oldRemoteId) && oldRemoteId != remoteId)
+            {
+                _remotes.Remove(oldRemoteId);
+            }
+
             _remotes[remoteId] = player;
             _playersRemote[player.Name] = remoteId;
         }
 
 
+
         public int GetPlayerRemote(string playerName)
         {
-            return _playersRemote[playerName];
+            if (_playersRemote.TryGetValue(playerName, out int remoteId))
+                return remoteId;
+
+            return 0;
         }
     }
 }

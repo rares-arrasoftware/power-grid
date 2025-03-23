@@ -10,6 +10,7 @@ using System.Windows.Media.Imaging;
 using PlayerInput.Helpers;
 using PlayerInput.Model.Managers.CardManager;
 using PlayerInput.Model.Managers.PlayerManager;
+using PlayerInput.Model.Managers.RemoteManager;
 using Serilog;
 using static PlayerInput.Model.Managers.PlayerManager.Status;
 
@@ -57,7 +58,35 @@ namespace PlayerInput.ViewModel.Players
         }
 
         // Public properties
-        public string Name => _player.Name;
+        public string Name
+        {
+            get => _player.Name;
+            set
+            {
+                if (_player.Name != value)
+                {
+                    _player.Name = value;
+                    OnPropertyChanged(nameof(Name));
+                }
+            }
+        }
+
+        public int RemoteId
+        {
+            get
+            {
+                 return RemoteManager.Instance.GetPlayerRemote(_player.Name);
+            }
+            set
+            {
+                if (value >= 1)
+                {
+                    RemoteManager.Instance.AssignRemote(value, _player);
+                    OnPropertyChanged(nameof(RemoteId));
+                }
+            }
+        }
+
         public int CitiesCount => _player.CitiesCount;
         public bool IsBureaucrat => _player.IsBureaucrat;
         public int Rank => _player.CardRank();

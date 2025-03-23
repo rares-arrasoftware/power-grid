@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using PlayerInput.Model.Managers.CardManager;
 using static PlayerInput.Model.Managers.PlayerManager.Status;
@@ -10,19 +12,33 @@ namespace PlayerInput.Model.Managers.PlayerManager
     /// <summary>
     /// Represents a player in the game, tracking their state, cards, and cities.
     /// </summary>
-    public class Player(string name)
+    public class Player(string name) : INotifyPropertyChanged
     {
         // ====== PROPERTIES ======
+
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         /// <summary>
         /// Player's name.
         /// </summary>
-        public string Name { get; } = name;
+        private string _name = name;
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                if (_name != value)
+                {
+                    _name = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Name)));
+                }
+            }
+        }
 
         /// <summary>
         /// Number of cities built by the player.
         /// </summary>
-        public int CitiesCount { get; private set; } = 0;
+        public int CitiesCount { get; set; } = 0;
 
         /// <summary>
         /// The last card that was removed from the player's hand.
