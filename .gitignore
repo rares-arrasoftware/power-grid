@@ -71,3 +71,5 @@ poetry.lock
 *.sqlite3
 .DS_Store
 Thumbs.db
+
+# gui
