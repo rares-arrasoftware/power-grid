@@ -1,4 +1,4 @@
-﻿using PlayerInput.Model.Managers.CardManager;
+﻿using gui.Model.Managers.CardManager;
 using System.Windows.Media;
 
 public class CardImageViewModel

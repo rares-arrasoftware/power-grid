@@ -1,7 +1,7 @@
-﻿<UserControl x:Class="PlayerInput.View.Market.PricePanelView"
+﻿<UserControl x:Class="gui.View.Market.PricePanelView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:market="clr-namespace:PlayerInput.View.Market">
+             xmlns:market="clr-namespace:gui.View.Market">
     <!--
         PricePanelView is responsible for rendering a price tier in the UI.
         Each PricePanel includes:

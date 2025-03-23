@@ -1,13 +1,13 @@
-﻿using PlayerInput.Model.Managers.InfoManager;
-using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Managers.PlayerManager;
-using PlayerInput.Model.Managers.RemoteManager;
-using PlayerInput.Model.Utils;
+﻿using gui.Model.Managers.InfoManager;
+using gui.Model.Managers.MarketManager;
+using gui.Model.Managers.PlayerManager;
+using gui.Model.Managers.RemoteManager;
+using gui.Model.Utils;
 using Serilog;
 using System.Xml.Linq;
-using static PlayerInput.Model.Managers.PlayerManager.Status;
+using static gui.Model.Managers.PlayerManager.Status;
 
-namespace PlayerInput.Model.Phases.ResourceBuyingPhase
+namespace gui.Model.Phases.ResourceBuyingPhase
 {
     public class BuyStep
     {

@@ -1,5 +1,5 @@
-﻿using PlayerInput.Model.Managers.InfoManager;
-using PlayerInput.ViewModel;
+﻿using gui.Model.Managers.InfoManager;
+using gui.ViewModel;
 using System.ComponentModel;
 using System.Windows;
 

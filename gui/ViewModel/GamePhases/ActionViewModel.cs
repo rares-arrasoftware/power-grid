@@ -1,15 +1,15 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Controls;
-using PlayerInput.Model;
-using PlayerInput.Model.Phases;
-using PlayerInput.Model.Phases.AuctionPhase;
-using PlayerInput.Model.Phases.BureaucracyPhase;
-using PlayerInput.Model.Phases.CityBuildingPhase;
-using PlayerInput.Model.Phases.ResourceBuyingPhase;
-using PlayerInput.View.GamePhases;
+using gui.Model;
+using gui.Model.Phases;
+using gui.Model.Phases.AuctionPhase;
+using gui.Model.Phases.BureaucracyPhase;
+using gui.Model.Phases.CityBuildingPhase;
+using gui.Model.Phases.ResourceBuyingPhase;
+using gui.View.GamePhases;
 
-namespace PlayerInput.ViewModel.GamePhases
+namespace gui.ViewModel.GamePhases
 {
     public class ActionViewModel : ViewModelBase
     {

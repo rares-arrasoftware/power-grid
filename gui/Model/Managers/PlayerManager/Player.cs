@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
-using PlayerInput.Model.Managers.CardManager;
-using static PlayerInput.Model.Managers.PlayerManager.Status;
+using gui.Model.Managers.CardManager;
+using static gui.Model.Managers.PlayerManager.Status;
 
-namespace PlayerInput.Model.Managers.PlayerManager
+namespace gui.Model.Managers.PlayerManager
 {
 
     /// <summary>

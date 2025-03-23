@@ -1,8 +1,8 @@
-﻿<UserControl x:Class="PlayerInput.View.Players.PlayersPanel"
+﻿<UserControl x:Class="gui.View.Players.PlayersPanel"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-             xmlns:players="clr-namespace:PlayerInput.View.Players"
-             xmlns:vm="clr-namespace:PlayerInput.ViewModel.Players">
+             xmlns:players="clr-namespace:gui.View.Players"
+             xmlns:vm="clr-namespace:gui.ViewModel.Players">
 
     <UserControl.DataContext>
         <vm:PlayersViewModel />

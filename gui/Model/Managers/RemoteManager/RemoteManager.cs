@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PlayerInput.Model.Managers.CardManager;
-using PlayerInput.Model.Managers.PlayerManager;
+using gui.Model.Managers.CardManager;
+using gui.Model.Managers.PlayerManager;
 using Serilog;
 
-namespace PlayerInput.Model.Managers.RemoteManager
+namespace gui.Model.Managers.RemoteManager
 {
     public enum Button
     {

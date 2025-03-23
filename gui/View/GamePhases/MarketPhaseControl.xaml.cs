@@ -1,4 +1,4 @@
-﻿using PlayerInput.ViewModel.GamePhases;
+﻿using gui.ViewModel.GamePhases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PlayerInput.View.GamePhases
+namespace gui.View.GamePhases
 {
     /// <summary>
     /// Interaction logic for MarketPhaseControl.xaml

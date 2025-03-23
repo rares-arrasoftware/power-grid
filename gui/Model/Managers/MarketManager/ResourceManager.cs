@@ -1,4 +1,4 @@
-﻿using PlayerInput.Model.Utils;
+﻿using gui.Model.Utils;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlayerInput.Model.Managers.MarketManager
+namespace gui.Model.Managers.MarketManager
 {
     public class ResourceManager
     {

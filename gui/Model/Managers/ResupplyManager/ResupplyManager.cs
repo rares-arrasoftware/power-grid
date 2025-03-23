@@ -1,11 +1,11 @@
-﻿using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Utils;
+﻿using gui.Model.Managers.MarketManager;
+using gui.Model.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace PlayerInput.Model.Managers.ResupplyManager
+namespace gui.Model.Managers.ResupplyManager
 {
     public class ResupplyManager
     {

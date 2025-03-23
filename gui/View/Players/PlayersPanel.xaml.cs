@@ -1,5 +1,5 @@
-﻿using PlayerInput.ViewModel.Market;
-using PlayerInput.ViewModel.Players;
+﻿using gui.ViewModel.Market;
+using gui.ViewModel.Players;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PlayerInput.View.Players
+namespace gui.View.Players
 {
     /// <summary>
     /// Interaction logic for PlayersPanel.xaml

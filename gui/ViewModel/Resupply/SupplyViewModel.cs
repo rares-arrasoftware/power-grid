@@ -1,7 +1,7 @@
 ﻿using Serilog;
 using System.Windows;
 
-namespace PlayerInput.ViewModel.Resupply
+namespace gui.ViewModel.Resupply
 {
     public class SupplyViewModel : ViewModelBase
     {

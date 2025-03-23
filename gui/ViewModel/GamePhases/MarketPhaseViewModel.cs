@@ -3,14 +3,14 @@ using System.Linq;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using PlayerInput.Helpers;
-using PlayerInput.Model;
-using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Phases.ResourceBuyingPhase;
-using PlayerInput.Model.Utils;
+using gui.Helpers;
+using gui.Model;
+using gui.Model.Managers.MarketManager;
+using gui.Model.Phases.ResourceBuyingPhase;
+using gui.Model.Utils;
 using Serilog;
 
-namespace PlayerInput.ViewModel.GamePhases
+namespace gui.ViewModel.GamePhases
 {
     public class MarketPhaseViewModel : ViewModelBase
     {

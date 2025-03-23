@@ -4,14 +4,14 @@ using System.DirectoryServices;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Managers.PlayerManager;
-using PlayerInput.Model.Phases;
-using PlayerInput.View;
-using PlayerInput.View.CardEditor;
+using gui.Model.Managers.MarketManager;
+using gui.Model.Managers.PlayerManager;
+using gui.Model.Phases;
+using gui.View;
+using gui.View.CardEditor;
 using Serilog;
 
-namespace PlayerInput.Model.Managers.CardManager
+namespace gui.Model.Managers.CardManager
 {
     public class CardManager
     {

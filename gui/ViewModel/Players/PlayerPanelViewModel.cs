@@ -1,6 +1,6 @@
-﻿using PlayerInput.Helpers;
-using PlayerInput.Model.Managers.PlayerManager;
-using PlayerInput.View.Players;
+﻿using gui.Helpers;
+using gui.Model.Managers.PlayerManager;
+using gui.View.Players;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace PlayerInput.ViewModel.Players
+namespace gui.ViewModel.Players
 {
     class PlayerPanelViewModel : ViewModelBase
     {

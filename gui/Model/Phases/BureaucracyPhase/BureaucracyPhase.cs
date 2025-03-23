@@ -1,11 +1,11 @@
-﻿using PlayerInput.Model.Managers.CardManager;
-using PlayerInput.Model.Managers.InfoManager;
-using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Managers.PlayerManager;
-using PlayerInput.Model.Managers.ResupplyManager;
+﻿using gui.Model.Managers.CardManager;
+using gui.Model.Managers.InfoManager;
+using gui.Model.Managers.MarketManager;
+using gui.Model.Managers.PlayerManager;
+using gui.Model.Managers.ResupplyManager;
 using Serilog;
 
-namespace PlayerInput.Model.Phases.BureaucracyPhase
+namespace gui.Model.Phases.BureaucracyPhase
 {
     public class BureaucracyPhase : Phase
     {

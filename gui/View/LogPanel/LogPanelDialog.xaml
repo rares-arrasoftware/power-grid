@@ -1,9 +1,9 @@
-﻿<Window x:Class="PlayerInput.View.LogPanel.LogPanelDialog"
+﻿<Window x:Class="gui.View.LogPanel.LogPanelDialog"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PlayerInput.View.LogPanel"
+        xmlns:local="clr-namespace:gui.View.LogPanel"
         mc:Ignorable="d"
         Background="#1E1E2E"
         Title="LogPanelDialog" Height="1200" Width="1600">

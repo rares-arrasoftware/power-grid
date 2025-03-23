@@ -1,11 +1,11 @@
-﻿using PlayerInput.Model.Utils;
+﻿using gui.Model.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlayerInput.Model.Managers.MarketManager
+namespace gui.Model.Managers.MarketManager
 {
     public class PriceTier(int price)
     {

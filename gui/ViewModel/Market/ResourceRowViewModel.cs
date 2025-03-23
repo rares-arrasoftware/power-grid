@@ -1,8 +1,8 @@
 ﻿using System.Collections.ObjectModel;
-using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.ViewModel;
+using gui.Model.Managers.MarketManager;
+using gui.ViewModel;
 
-namespace PlayerInput.ViewModel.Market
+namespace gui.ViewModel.Market
 {
     public class ResourceRowViewModel : ViewModelBase
     {

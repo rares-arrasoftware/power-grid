@@ -1,12 +1,12 @@
-﻿using PlayerInput.Model.Managers.CardManager;
-using PlayerInput.Model.Managers.InfoManager;
-using PlayerInput.Model.Managers.PlayerManager;
-using PlayerInput.Model.Managers.RemoteManager;
+﻿using gui.Model.Managers.CardManager;
+using gui.Model.Managers.InfoManager;
+using gui.Model.Managers.PlayerManager;
+using gui.Model.Managers.RemoteManager;
 using Serilog;
 using System.Windows;
-using static PlayerInput.Model.Managers.PlayerManager.Status;
+using static gui.Model.Managers.PlayerManager.Status;
 
-namespace PlayerInput.Model.Phases.AuctionPhase
+namespace gui.Model.Phases.AuctionPhase
 {
     public class ChoosePowerPlantStep(AuctionContext ctx) : Step(ctx)
     {

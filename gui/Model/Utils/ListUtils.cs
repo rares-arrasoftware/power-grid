@@ -1,5 +1,5 @@
 ﻿
-namespace PlayerInput.Model.Utils
+namespace gui.Model.Utils
 {
     /// <summary>
     /// Provides utility functions for working with lists.

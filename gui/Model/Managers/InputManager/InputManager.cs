@@ -1,7 +1,7 @@
 ﻿using Serilog;
 using System.Net.Sockets;
 
-namespace PlayerInput.Model.Managers.InputManager
+namespace gui.Model.Managers.InputManager
 {
     /// <summary>
     /// Singleton class responsible for handling player input via UDP.

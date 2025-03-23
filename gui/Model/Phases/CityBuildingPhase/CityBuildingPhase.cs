@@ -1,13 +1,13 @@
-﻿using PlayerInput.Model.Managers.InfoManager;
-using PlayerInput.Model.Managers.PlayerManager;
-using PlayerInput.Model.Managers.RemoteManager;
-using PlayerInput.Model.Phases.ResourceBuyingPhase;
+﻿using gui.Model.Managers.InfoManager;
+using gui.Model.Managers.PlayerManager;
+using gui.Model.Managers.RemoteManager;
+using gui.Model.Phases.ResourceBuyingPhase;
 using Serilog;
 using System;
 using System.Numerics;
-using static PlayerInput.Model.Managers.PlayerManager.Status;
+using static gui.Model.Managers.PlayerManager.Status;
 
-namespace PlayerInput.Model.Phases.CityBuildingPhase
+namespace gui.Model.Phases.CityBuildingPhase
 {
 
     public class CityBuildingPhase : Phase

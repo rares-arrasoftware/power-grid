@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PlayerInput.View.Market.ResourceView"
+﻿<UserControl x:Class="gui.View.Market.ResourceView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!--

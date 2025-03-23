@@ -1,9 +1,9 @@
-﻿using PlayerInput.Helpers;
-using PlayerInput.Model.Managers.MarketManager;
+﻿using gui.Helpers;
+using gui.Model.Managers.MarketManager;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
-namespace PlayerInput.ViewModel.Market
+namespace gui.ViewModel.Market
 {
     public class MarketViewModel : ViewModelBase
     {

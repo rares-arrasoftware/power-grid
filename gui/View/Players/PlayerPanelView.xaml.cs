@@ -3,9 +3,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using PlayerInput.ViewModel.Players;
+using gui.ViewModel.Players;
 
-namespace PlayerInput.View.Players
+namespace gui.View.Players
 {
     public partial class PlayerPanelView : UserControl
     {

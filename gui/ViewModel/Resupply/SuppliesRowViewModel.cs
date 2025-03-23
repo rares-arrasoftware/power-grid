@@ -1,11 +1,11 @@
-﻿using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Managers.ResupplyManager;
+﻿using gui.Model.Managers.MarketManager;
+using gui.Model.Managers.ResupplyManager;
 using Serilog;
 using System.Collections.ObjectModel;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace PlayerInput.ViewModel.Resupply
+namespace gui.ViewModel.Resupply
 {
     public class SuppliesRowViewModel : ViewModelBase
     {

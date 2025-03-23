@@ -1,12 +1,12 @@
-﻿<Window x:Class="PlayerInput.MainWindow"
+﻿<Window x:Class="gui.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:market="clr-namespace:PlayerInput.View.Market"
-        xmlns:players="clr-namespace:PlayerInput.View.Players"
-        xmlns:resupply="clr-namespace:PlayerInput.View.Resupply"
-        xmlns:info="clr-namespace:PlayerInput.View.Info"
-        xmlns:action="clr-namespace:PlayerInput.View.GamePhases"
-        xmlns:log="clr-namespace:PlayerInput.View.LogPanel"
+        xmlns:market="clr-namespace:gui.View.Market"
+        xmlns:players="clr-namespace:gui.View.Players"
+        xmlns:resupply="clr-namespace:gui.View.Resupply"
+        xmlns:info="clr-namespace:gui.View.Info"
+        xmlns:action="clr-namespace:gui.View.GamePhases"
+        xmlns:log="clr-namespace:gui.View.LogPanel"
         Title="Player Input" Height="200" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PlayerInput.Model.Managers.PlayerManager;
+using gui.Model.Managers.PlayerManager;
 using Serilog;
-using static PlayerInput.Model.Managers.PlayerManager.Status;
+using static gui.Model.Managers.PlayerManager.Status;
 
-namespace PlayerInput.Model.Phases.AuctionPhase
+namespace gui.Model.Phases.AuctionPhase
 {
     public class StartAuctionStep(AuctionContext ctx) : Step(ctx)
     {

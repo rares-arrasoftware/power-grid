@@ -1,4 +1,4 @@
-﻿<Window x:Class="PlayerInput.View.CardEditor.CardEditorDialog"
+﻿<Window x:Class="gui.View.CardEditor.CardEditorDialog"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Card Editor"

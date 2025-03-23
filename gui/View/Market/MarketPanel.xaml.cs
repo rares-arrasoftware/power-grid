@@ -1,8 +1,8 @@
-﻿using PlayerInput.ViewModel.Market;
+﻿using gui.ViewModel.Market;
 using System.Windows.Controls;
 
 
-namespace PlayerInput.View.Market
+namespace gui.View.Market
 {
     public partial class MarketPanel : UserControl
     {

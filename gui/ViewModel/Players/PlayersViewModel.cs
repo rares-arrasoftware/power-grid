@@ -1,11 +1,11 @@
-﻿using PlayerInput.Helpers;
-using PlayerInput.Model;
-using PlayerInput.Model.Managers.PlayerManager;
+﻿using gui.Helpers;
+using gui.Model;
+using gui.Model.Managers.PlayerManager;
 using Serilog;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
-namespace PlayerInput.ViewModel.Players
+namespace gui.ViewModel.Players
 {
     class PlayersViewModel : ViewModelBase
     {

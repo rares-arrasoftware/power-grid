@@ -2,10 +2,10 @@
 using System.IO;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using PlayerInput.Helpers;
-using PlayerInput.Model.Managers.CardManager;
+using gui.Helpers;
+using gui.Model.Managers.CardManager;
 
-namespace PlayerInput.ViewModel.GamePhases
+namespace gui.ViewModel.GamePhases
 {
     public class AuctionViewModel : ViewModelBase
     {

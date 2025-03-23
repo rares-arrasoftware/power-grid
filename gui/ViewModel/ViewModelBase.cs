@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace PlayerInput.ViewModel
+namespace gui.ViewModel
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {

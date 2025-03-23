@@ -1,7 +1,8 @@
 ﻿using System.Globalization;
 using System.Windows.Data;
+using System;
 
-namespace PlayerInput.Helpers
+namespace gui.Helpers
 {
     public class LogIndexFormatter : IValueConverter
     {

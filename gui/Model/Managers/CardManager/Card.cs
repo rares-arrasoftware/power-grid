@@ -1,10 +1,10 @@
-﻿using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Utils;
+﻿using gui.Model.Managers.MarketManager;
+using gui.Model.Utils;
 using System;
 using System.Collections.Generic;
 using System.Windows.Media;
 
-namespace PlayerInput.Model.Managers.CardManager
+namespace gui.Model.Managers.CardManager
 {
     public enum CardType
     {

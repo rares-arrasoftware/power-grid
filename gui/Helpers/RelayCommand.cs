@@ -1,6 +1,7 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 
-namespace PlayerInput.Helpers
+namespace gui.Helpers
 {
     public class RelayCommand : ICommand
     {

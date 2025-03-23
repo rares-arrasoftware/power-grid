@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PlayerInput.View.Players
+namespace gui.View.Players
 {
     /// <summary>
     /// Interaction logic for StatusBtnView.xaml

@@ -7,14 +7,14 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using PlayerInput.Helpers;
-using PlayerInput.Model.Managers.CardManager;
-using PlayerInput.Model.Managers.PlayerManager;
-using PlayerInput.Model.Managers.RemoteManager;
+using gui.Helpers;
+using gui.Model.Managers.CardManager;
+using gui.Model.Managers.PlayerManager;
+using gui.Model.Managers.RemoteManager;
 using Serilog;
-using static PlayerInput.Model.Managers.PlayerManager.Status;
+using static gui.Model.Managers.PlayerManager.Status;
 
-namespace PlayerInput.ViewModel.Players
+namespace gui.ViewModel.Players
 {
     public class PlayerDetailsViewModel: ViewModelBase
     {

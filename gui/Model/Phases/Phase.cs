@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlayerInput.Model.Phases
+namespace gui.Model.Phases
 {
     public abstract class Phase
     {

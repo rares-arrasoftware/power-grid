@@ -1,9 +1,9 @@
-﻿using PlayerInput.Model.Utils;
+﻿using gui.Model.Utils;
 using Serilog;
 using System.IO;
-using static PlayerInput.Model.Managers.PlayerManager.Status;
+using static gui.Model.Managers.PlayerManager.Status;
 
-namespace PlayerInput.Model.Managers.PlayerManager
+namespace gui.Model.Managers.PlayerManager
 {
     /// <summary>
     /// Singleton manager responsible for handling players and their states.

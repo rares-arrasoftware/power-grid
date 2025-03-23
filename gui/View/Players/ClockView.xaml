@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PlayerInput.View.Players.ClockView"
+﻿<UserControl x:Class="gui.View.Players.ClockView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>

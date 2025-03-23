@@ -1,12 +1,12 @@
 ﻿
-using PlayerInput.Helpers;
-using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Managers.ResupplyManager;
+using gui.Helpers;
+using gui.Model.Managers.MarketManager;
+using gui.Model.Managers.ResupplyManager;
 using Serilog;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
-namespace PlayerInput.ViewModel.Resupply
+namespace gui.ViewModel.Resupply
 {
     public class ResupplyViewModel : ViewModelBase
     {

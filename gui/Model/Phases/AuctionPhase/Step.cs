@@ -1,9 +1,9 @@
-﻿using PlayerInput.Model.Managers.CardManager;
-using PlayerInput.Model.Managers.PlayerManager;
-using PlayerInput.Model.Managers.RemoteManager;
+﻿using gui.Model.Managers.CardManager;
+using gui.Model.Managers.PlayerManager;
+using gui.Model.Managers.RemoteManager;
 using Serilog;
 
-namespace PlayerInput.Model.Phases.AuctionPhase
+namespace gui.Model.Phases.AuctionPhase
 {
     /// <summary>
     /// Represents an abstract step in a game phase. 

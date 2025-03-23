@@ -1,4 +1,4 @@
-﻿using PlayerInput.ViewModel.LogWindow;
+﻿using gui.ViewModel.LogWindow;
 using Serilog;
 using System.Configuration;
 using System.Data;
@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Windows;
 
 
-namespace PlayerInput
+namespace gui
 {
     /// <summary>
     /// Interaction logic for App.xaml

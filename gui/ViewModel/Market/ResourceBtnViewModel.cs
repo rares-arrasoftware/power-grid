@@ -1,11 +1,11 @@
-﻿using PlayerInput.Helpers;
-using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.ViewModel;
+﻿using gui.Helpers;
+using gui.Model.Managers.MarketManager;
+using gui.ViewModel;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace PlayerInput.ViewModel.Market
+namespace gui.ViewModel.Market
 {
     public class ResourceBtnViewModel : ViewModelBase
     {

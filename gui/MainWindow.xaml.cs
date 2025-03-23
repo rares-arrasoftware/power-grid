@@ -2,17 +2,17 @@
 using System.Runtime.InteropServices;  // Add this for console attachment
 using System.Threading.Tasks;
 using System.Windows;
-using PlayerInput.ViewModel;
-using PlayerInput.Model;
-using PlayerInput.Model.Managers.CardManager;
-using PlayerInput.Model.Managers.InputManager;
-using PlayerInput.Model.Managers.PlayerManager;
-using PlayerInput.Model.Managers.RemoteManager;
+using gui.ViewModel;
+using gui.Model;
+using gui.Model.Managers.CardManager;
+using gui.Model.Managers.InputManager;
+using gui.Model.Managers.PlayerManager;
+using gui.Model.Managers.RemoteManager;
 using Serilog;
-using PlayerInput.Model.Managers.InfoManager;
-using PlayerInput.ViewModel.CardEditor;
+using gui.Model.Managers.InfoManager;
+using gui.ViewModel.CardEditor;
 
-namespace PlayerInput
+namespace gui
 {
     public partial class MainWindow : Window
     {

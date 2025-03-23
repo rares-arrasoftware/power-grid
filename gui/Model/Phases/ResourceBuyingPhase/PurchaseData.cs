@@ -1,12 +1,12 @@
-﻿using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Utils;
+﻿using gui.Model.Managers.MarketManager;
+using gui.Model.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlayerInput.Model.Phases.ResourceBuyingPhase
+namespace gui.Model.Phases.ResourceBuyingPhase
 {
     public class PurchaseData()
     {

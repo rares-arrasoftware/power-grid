@@ -2,12 +2,12 @@
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
-using PlayerInput.Helpers;
-using PlayerInput.Model;
-using PlayerInput.Model.Managers.MarketManager;
+using gui.Helpers;
+using gui.Model;
+using gui.Model.Managers.MarketManager;
 using Serilog;
 
-namespace PlayerInput.ViewModel.GamePhases
+namespace gui.ViewModel.GamePhases
 {
     public class ResourceRowViewModel : ViewModelBase
     {

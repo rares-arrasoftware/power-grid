@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace PlayerInput.View.Info
+namespace gui.View.Info
 {
     public partial class InfoPanel : UserControl
     {

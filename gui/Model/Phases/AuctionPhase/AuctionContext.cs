@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PlayerInput.Model.Managers.CardManager;
-using PlayerInput.Model.Managers.PlayerManager;
+using gui.Model.Managers.CardManager;
+using gui.Model.Managers.PlayerManager;
 
-namespace PlayerInput.Model.Phases.AuctionPhase
+namespace gui.Model.Phases.AuctionPhase
 {
     public class AuctionContext()
     {

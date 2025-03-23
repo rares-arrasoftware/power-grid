@@ -1,10 +1,10 @@
-﻿using PlayerInput.Helpers;
-using PlayerInput.Model.Managers.PlayerManager;
+﻿using gui.Helpers;
+using gui.Model.Managers.PlayerManager;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace PlayerInput.ViewModel.Players
+namespace gui.ViewModel.Players
 {
     class StatusBtnViewModel : ViewModelBase
     {

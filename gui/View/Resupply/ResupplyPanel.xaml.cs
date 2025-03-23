@@ -1,7 +1,7 @@
-﻿using PlayerInput.ViewModel.Resupply;
+﻿using gui.ViewModel.Resupply;
 using System.Windows.Controls;
 
-namespace PlayerInput.View.Resupply
+namespace gui.View.Resupply
 {
     /// <summary>
     /// Interaction logic for RessuplyPanel.xaml

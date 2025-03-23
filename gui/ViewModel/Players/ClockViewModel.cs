@@ -1,10 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Input;
-using PlayerInput.Helpers;
-using PlayerInput.Model.Managers.PlayerManager;
+using gui.Helpers;
+using gui.Model.Managers.PlayerManager;
 
-namespace PlayerInput.ViewModel.Players
+namespace gui.ViewModel.Players
 {
     public class ClockViewModel : ViewModelBase
     {

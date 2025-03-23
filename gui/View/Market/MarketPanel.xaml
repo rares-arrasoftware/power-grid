@@ -1,8 +1,8 @@
-﻿<UserControl x:Class="PlayerInput.View.Market.MarketPanel"
+﻿<UserControl x:Class="gui.View.Market.MarketPanel"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-             xmlns:market="clr-namespace:PlayerInput.View.Market"
-             xmlns:vm="clr-namespace:PlayerInput.ViewModel.Market">
+             xmlns:market="clr-namespace:gui.View.Market"
+             xmlns:vm="clr-namespace:gui.ViewModel.Market">
 
     <UserControl.DataContext>
         <vm:MarketViewModel />

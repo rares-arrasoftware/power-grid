@@ -1,7 +1,7 @@
-﻿using PlayerInput.ViewModel.CardEditor;
+﻿using gui.ViewModel.CardEditor;
 using System.Windows;
 
-namespace PlayerInput.View.CardEditor
+namespace gui.View.CardEditor
 {
     public partial class CardEditorDialog : Window
     {

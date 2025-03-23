@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Threading;
 
-namespace PlayerInput.Model.Managers.PlayerManager
+namespace gui.Model.Managers.PlayerManager
 {
     public class Status
     {

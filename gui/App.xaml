@@ -1,8 +1,8 @@
-﻿<Application x:Class="PlayerInput.App"
+﻿<Application x:Class="gui.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:PlayerInput"
-             xmlns:helpers="clr-namespace:PlayerInput.Helpers"
+             xmlns:local="clr-namespace:gui"
+             xmlns:helpers="clr-namespace:gui.Helpers"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>

@@ -2,7 +2,7 @@
 using System.Timers;
 using Timer = System.Timers.Timer;
 
-namespace PlayerInput.Model.Managers.PlayerManager
+namespace gui.Model.Managers.PlayerManager
 {
     public class Clock
     {

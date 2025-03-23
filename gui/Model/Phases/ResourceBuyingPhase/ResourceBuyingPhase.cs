@@ -1,7 +1,7 @@
-﻿using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Managers.PlayerManager;
-using PlayerInput.Model.Managers.RemoteManager;
-using PlayerInput.Model.Phases.AuctionPhase;
+﻿using gui.Model.Managers.MarketManager;
+using gui.Model.Managers.PlayerManager;
+using gui.Model.Managers.RemoteManager;
+using gui.Model.Phases.AuctionPhase;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlayerInput.Model.Phases.ResourceBuyingPhase
+namespace gui.Model.Phases.ResourceBuyingPhase
 {
     public class ResourceBuyingPhase(Action<PurchaseData>? purchaseUpdated) : Phase
     { 

@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Threading;
 
-namespace PlayerInput.Model.Managers.InfoManager
+namespace gui.Model.Managers.InfoManager
 {
     public class InfoManager : INotifyPropertyChanged
     {

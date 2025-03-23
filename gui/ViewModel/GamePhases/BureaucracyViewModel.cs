@@ -1,8 +1,8 @@
-﻿using PlayerInput.Helpers;
-using PlayerInput.Model;
+﻿using gui.Helpers;
+using gui.Model;
 using System.Windows.Input;
 
-namespace PlayerInput.ViewModel.GamePhases
+namespace gui.ViewModel.GamePhases
 {
     public class BureaucracyViewModel : ViewModelBase
     {

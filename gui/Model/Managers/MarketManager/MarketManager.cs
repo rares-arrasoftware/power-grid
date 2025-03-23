@@ -1,12 +1,12 @@
-﻿using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Utils;
+﻿using gui.Model.Managers.MarketManager;
+using gui.Model.Utils;
 using System.Diagnostics;
 using System.Resources;
 using System.Security.AccessControl;
 using System.IO;
 using Serilog;
 
-namespace PlayerInput.Model.Managers.MarketManager
+namespace gui.Model.Managers.MarketManager
 {
     public enum ResourceType
     {

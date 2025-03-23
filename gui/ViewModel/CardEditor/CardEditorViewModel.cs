@@ -1,16 +1,16 @@
 ﻿using Microsoft.Win32;
-using PlayerInput.Helpers;
-using PlayerInput.Model.Managers.CardManager;
-using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Utils;
-using PlayerInput.View.CardEditor;
+using gui.Helpers;
+using gui.Model.Managers.CardManager;
+using gui.Model.Managers.MarketManager;
+using gui.Model.Utils;
+using gui.View.CardEditor;
 using System.IO;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using Serilog;
 
-namespace PlayerInput.ViewModel.CardEditor
+namespace gui.ViewModel.CardEditor
 {
     public class CardEditorViewModel : ViewModelBase
     {
@@ -127,7 +127,7 @@ namespace PlayerInput.ViewModel.CardEditor
             Application.Current.Dispatcher.Invoke(() =>
             {
                 CardId = cardId.ToString();
-                var editor = new PlayerInput.View.CardEditor.CardEditorDialog { DataContext = this };
+                var editor = new gui.View.CardEditor.CardEditorDialog { DataContext = this };
 
                 if (editor.ShowDialog() == true)
                 {

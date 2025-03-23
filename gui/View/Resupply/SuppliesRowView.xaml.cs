@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PlayerInput.View.Resupply
+namespace gui.View.Resupply
 {
     /// <summary>
     /// Interaction logic for LevelPanel.xaml

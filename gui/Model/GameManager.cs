@@ -1,13 +1,13 @@
 ﻿using System.IO;
-using PlayerInput.Model.Managers.MarketManager;
-using PlayerInput.Model.Managers.PlayerManager;
-using PlayerInput.Model.Managers.RemoteManager;
-using PlayerInput.Model.Phases;
-using PlayerInput.Model.Phases.ResourceBuyingPhase;
+using gui.Model.Managers.MarketManager;
+using gui.Model.Managers.PlayerManager;
+using gui.Model.Managers.RemoteManager;
+using gui.Model.Phases;
+using gui.Model.Phases.ResourceBuyingPhase;
 using Serilog;
 
 
-namespace PlayerInput.Model
+namespace gui.Model
 {
     public class GameManager
     {

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace PlayerInput.ViewModel.LogWindow
+namespace gui.ViewModel.LogWindow
 {
     public class LogPanelViewModel : ViewModelBase
     {
