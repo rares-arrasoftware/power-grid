@@ -64,14 +64,13 @@ namespace gui.Model.Managers.CardManager
         {
             Log.Information($"OnCardScanned, id: {cardId}");
 
-            if (!_cards.ContainsKey(cardId))
+            if (!_cards.TryGetValue(cardId, out var card))
             {
                 Log.Information($"Unknown card scanned: {cardId}");
                 UnknownCardScanned?.Invoke(cardId);
                 return;
             }
 
-            var card = _cards[cardId];
             HandleCardScanned(card);
         }
 
@@ -89,11 +88,12 @@ namespace gui.Model.Managers.CardManager
 
         private void HandleEventCard(Card card)
         {
-            for (int i = 0; i < card.MarketEffect.Count; i++)
-            {
-                MarketManager.MarketManager.Instance.Update((ResourceType)i, card.MarketEffect[i]);
-            }
-            MarketManager.MarketManager.Instance.UpdateMostLimitedResource(card.MarketEffectLowest);
+            card.MarketEffect
+                .Select((effect, index) => (effect, index))
+                .ToList()
+                .ForEach(x => MarketManager.Instance.Update((ResourceType)x.index, x.effect));
+                
+            MarketManager.Instance.UpdateMostLimitedResource(card.MarketEffectLowest);
             IsLevel3 = card.Level3;
         }
 
@@ -107,12 +107,9 @@ namespace gui.Model.Managers.CardManager
 
             try
             {
-                string json = File.ReadAllText(CardsFilePath);
-                var loadedCards = JsonSerializer.Deserialize<List<Card>>(json) ?? [];
-                foreach (var card in loadedCards)
-                {
-                    _cards[card.Id] = card;
-                }
+                var loadedCards = JsonSerializer.Deserialize<List<Card>>(File.ReadAllText(CardsFilePath)) ?? [];
+                _cards.Clear();
+                loadedCards.ToList().ForEach(card => _cards[card.Id] = card);
             }
             catch (Exception ex)
             {
