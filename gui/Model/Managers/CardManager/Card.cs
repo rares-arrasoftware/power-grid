@@ -15,25 +15,26 @@ namespace gui.Model.Managers.CardManager
 
     public class Card
     {
+        // Core properties
         public int Id { get; set; }
         public CardType Type { get; set; }
         public int Rank { get; set; } = 0;
         public string ImagePath { get; set; } = "";
 
-        // Properties for different card types
-        public bool Plus { get; set; } = false;         // PowerPlant only
-        public bool EndsTurn { get; set; } = false;     // PowerPlant only
-        public bool Bureaucrat { get; set; } = false;   // Utility only
-        public bool Level3 { get; set; } = false;       // Event only
+        // PowerPlant specific
+        public bool Plus { get; set; } = false;
+        public bool EndsTurn { get; set; } = false;
 
-        // Market effect list (matches the resource order)
+        // Event specific
+        public bool Level3 { get; set; } = false;
+
+        // Utility specific
+        public bool Bureaucrat { get; set; } = false;
+
+        // Market effects
         public List<int> MarketEffect { get; set; } = ListUtils.EnumToList<ResourceType, int>(_ => 0);
-
         public int MarketEffectLowest { get; set; } = 0;
 
-        public override string ToString()
-        {
-            return $"{Type} Card [ID: {Id}, Rank: {Rank}, Image: {ImagePath}]";
-        }
+        public override string ToString() => $"{Type} Card [ID: {Id}, Rank: {Rank}, Image: {ImagePath}]";
     }
 }

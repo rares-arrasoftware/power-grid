@@ -3,6 +3,9 @@ using System.Windows.Input;
 
 namespace gui.Helpers
 {
+    /// <summary>
+    /// Simple command implementation for MVVM pattern.
+    /// </summary>
     public class RelayCommand : ICommand
     {
         // 1. Fields
@@ -11,6 +14,11 @@ namespace gui.Helpers
         private readonly Predicate<object?>? _canExecute;
 
         // 2. Constructors
+        /// <summary>
+        /// Creates a new command.
+        /// </summary>
+        /// <param name="execute">The execution logic.</param>
+        /// <param name="canExecute">The execution status logic.</param>
         public RelayCommand(Action<object?> execute, Predicate<object?>? canExecute = null)
         {
             _execute = execute ?? throw new ArgumentNullException(nameof(execute));

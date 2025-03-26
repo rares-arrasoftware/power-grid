@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.DirectoryServices;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -25,94 +24,17 @@ namespace gui.Model.Managers.CardManager
         public event Action<Card>? NewCardScanned;
         public event Action<int>? UnknownCardScanned;
 
-        public bool Level3 = false;
+        public bool IsLevel3 { get; private set; }
 
         private CardManager()
         {
             LoadCards();
         }
 
-        /// <summary>
-        /// Loads all cards from `cards.json` into memory.
-        /// </summary>
-        private void LoadCards()
-        {
-            if (!File.Exists(CardsFilePath))
-            {
-                File.WriteAllText(CardsFilePath, "[]"); // Create an empty JSON array if the file doesn't exist
-            }
-
-            try
-            {
-                string json = File.ReadAllText(CardsFilePath);
-                var loadedCards = JsonSerializer.Deserialize<List<Card>>(json) ?? [];
-
-                foreach (var card in loadedCards)
-                {
-                    _cards[card.Id] = card;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error loading cards.json: {ex.Message}");
-            }
-        }
-
-        /// <summary>
-        /// Handles scanning a card, adding it to memory if unknown.
-        /// </summary>
-        public void OnCardScanned(int cardId)
-        {
-            Log.Information($"OnCardScanned, id: {cardId}");
-
-            if (!_cards.ContainsKey(cardId))
-            {
-                Log.Information($"We don't know this");
-                UnknownCardScanned?.Invoke(cardId);
-                return;
-            }
-
-            Card card = _cards[cardId];
-
-            if (card.Type == CardType.Event)
-            {
-                for (int i = 0; i < card.MarketEffect.Count; i++)
-                {
-                    MarketManager.MarketManager.Instance.Update((ResourceType)i, card.MarketEffect[i]);
-                }
-                MarketManager.MarketManager.Instance.UpdateMostLimitedResource(card.MarketEffectLowest);
-                
-                Level3 = card.Level3;
-            }
-            App.LogPanelViewModel.Add($"Card scanned: {cardId}, {card.Type}, {card.Rank}");
-
-            BurnCard(card);
-
-            NewCardScanned?.Invoke(card);
-        }
-
-
-        /// <summary>
-        /// Saves all cards back to `cards.json` for redundancy.
-        /// </summary>
-        private void SaveCards()
-        {
-            Log.Information($"Save Cards: {CardsFilePath}");
-            try
-            {
-                var json = JsonSerializer.Serialize(_cards.Values, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(CardsFilePath, json);
-            }
-            catch (Exception ex)
-            {
-                Log.Error($"Error saving cards.json: {ex.Message}");
-            }
-        }
-
+        // Card Management
         public void AddCard(Card card)
         {
             _cards[card.Id] = card;
-
             SaveCards();
         }
 
@@ -134,6 +56,81 @@ namespace gui.Model.Managers.CardManager
             {
                 App.LogPanelViewModel.Add($"Card Burned: {card.Rank}, player: {assignedPlayer.Name}");
                 assignedPlayer.BurnCard(card);
+            }
+        }
+
+        // Card Scanning
+        public void OnCardScanned(int cardId)
+        {
+            Log.Information($"OnCardScanned, id: {cardId}");
+
+            if (!_cards.ContainsKey(cardId))
+            {
+                Log.Information($"Unknown card scanned: {cardId}");
+                UnknownCardScanned?.Invoke(cardId);
+                return;
+            }
+
+            var card = _cards[cardId];
+            HandleCardScanned(card);
+        }
+
+        private void HandleCardScanned(Card card)
+        {
+            if (card.Type == CardType.Event)
+            {
+                HandleEventCard(card);
+            }
+
+            App.LogPanelViewModel.Add($"Card scanned: {card.Id}, {card.Type}, {card.Rank}");
+            BurnCard(card);
+            NewCardScanned?.Invoke(card);
+        }
+
+        private void HandleEventCard(Card card)
+        {
+            for (int i = 0; i < card.MarketEffect.Count; i++)
+            {
+                MarketManager.MarketManager.Instance.Update((ResourceType)i, card.MarketEffect[i]);
+            }
+            MarketManager.MarketManager.Instance.UpdateMostLimitedResource(card.MarketEffectLowest);
+            IsLevel3 = card.Level3;
+        }
+
+        // Persistence
+        private void LoadCards()
+        {
+            if (!File.Exists(CardsFilePath))
+            {
+                File.WriteAllText(CardsFilePath, "[]");
+            }
+
+            try
+            {
+                string json = File.ReadAllText(CardsFilePath);
+                var loadedCards = JsonSerializer.Deserialize<List<Card>>(json) ?? [];
+                foreach (var card in loadedCards)
+                {
+                    _cards[card.Id] = card;
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"Error loading cards.json: {ex.Message}");
+            }
+        }
+
+        private void SaveCards()
+        {
+            Log.Information($"Save Cards: {CardsFilePath}");
+            try
+            {
+                var json = JsonSerializer.Serialize(_cards.Values, new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(CardsFilePath, json);
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"Error saving cards.json: {ex.Message}");
             }
         }
     }

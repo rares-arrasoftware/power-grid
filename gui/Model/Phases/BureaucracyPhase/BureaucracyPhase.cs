@@ -30,7 +30,7 @@ namespace gui.Model.Phases.BureaucracyPhase
                 ResupplyManager.Instance.Level = 2;
             }
 
-            if (CardManager.Instance.Level3)
+            if (CardManager.Instance.IsLevel3)
             {
                 Log.Information("Level 3 activated by CardManager.");
                 App.LogPanelViewModel.Add($"Level 3 activated by CardManager.");
