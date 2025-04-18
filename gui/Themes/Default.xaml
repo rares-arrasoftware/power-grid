@@ -8,6 +8,7 @@
     <SolidColorBrush x:Key="AccentBrush" Color="#FF6F61" />
     <SolidColorBrush x:Key="SecondAccentBrush" Color="#1FDB19" />
     <SolidColorBrush x:Key="TextBrush" Color="#FFFFFF" />
+    <ImageBrush x:Key="PlayersBackground" ImageSource="/Assets/Images/players.png"/>
 
     <!-- ======= Global TextBlock Style ======= -->
     <Style TargetType="TextBlock">

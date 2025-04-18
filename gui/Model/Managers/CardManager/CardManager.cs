@@ -91,9 +91,9 @@ namespace gui.Model.Managers.CardManager
             card.MarketEffect
                 .Select((effect, index) => (effect, index))
                 .ToList()
-                .ForEach(x => MarketManager.Instance.Update((ResourceType)x.index, x.effect));
-                
-            MarketManager.Instance.UpdateMostLimitedResource(card.MarketEffectLowest);
+                .ForEach(x => MarketManager.MarketManager.Instance.Update((ResourceType)x.index, x.effect));
+
+            MarketManager.MarketManager.Instance.UpdateMostLimitedResource(card.MarketEffectLowest);
             IsLevel3 = card.Level3;
         }
 
