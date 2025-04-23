@@ -76,7 +76,7 @@ namespace gui.Model.Phases.AuctionPhase
             InfoManager.Instance.OptionA = "N/A";
             InfoManager.Instance.OptionB = "Pass";
             InfoManager.Instance.OptionC = "SpecialAuction";
-            InfoManager.Instance.OptionD = "Something";
+            InfoManager.Instance.OptionD = "N/A";
         }
     }
 }

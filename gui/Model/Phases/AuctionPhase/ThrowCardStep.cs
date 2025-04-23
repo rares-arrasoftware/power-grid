@@ -3,7 +3,6 @@ using gui.Model.Managers.InfoManager;
 using gui.Model.Managers.PlayerManager;
 using gui.Model.Managers.RemoteManager;
 using Serilog;
-using System.Numerics;
 using static gui.Model.Managers.PlayerManager.Status;
 
 namespace gui.Model.Phases.AuctionPhase
@@ -14,8 +13,18 @@ namespace gui.Model.Phases.AuctionPhase
         {
             if (_ctx.Card == null)
             {
-                Log.Warning("No card scanned. Starting auction.");
+                Log.Warning("Card null or no participants");
                 return new StartAuctionStep(_ctx);
+            }
+
+            if (_ctx.Participants.Count == 0)
+            { 
+                if(_ctx.Card.EndsTurn)
+                {
+                    _ctx.Card.EndsTurn = false;
+                    _ctx.SpecialAuctionRequest.Clear();
+                }
+                return new StartAuctionStep(_ctx); 
             }
 
             var player = _ctx.Participants.First();
