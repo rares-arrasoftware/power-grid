@@ -21,69 +21,56 @@ namespace gui.Model.Phases.ResourceBuyingPhase
 
         public BuyStep(Player player)
         {
-            _purchaseData = new();
             _active = player;
+
+            _purchaseData = new PurchaseData
+            {
+                PurchaseRecords = player.SupportedResources()
+                    .ToDictionary(resource => resource, _ => 0)
+            };
+
             PlayerManager.Instance.SetPlayerState(_active, PlayerState.Active);
             // Initialize button-action mappings
             _buttonActions = new()
             {
                 { Button.BtnA, ActionA },
                 { Button.BtnB, ActionB },
-                { Button.BtnC, MoveUp },
-                { Button.BtnD, MoveDown }
+                { Button.BtnC, Next },
+                { Button.BtnD, CompletePhase }
             };
+        }
 
+        public void Init()
+        {
             UpdateInfo();
+            PurchaseUpdated?.Invoke(_purchaseData);
+            if (_purchaseData.PurchaseRecords.Count == 0)
+            {
+                CompletePhase();
+            }
         }
 
         public async Task Run() => await _completedTcs.Task;
 
-        public void MoveUp() => 
-            _purchaseData.Selected = (_purchaseData.Selected > 0) ? 
-                _purchaseData.Selected - 1 : _purchaseData.PurchaseRecords.Count;
-
-        public void MoveDown() => 
-            _purchaseData.Selected = (_purchaseData.Selected < _purchaseData.PurchaseRecords.Count) ? 
+        public void Next() => 
+            _purchaseData.Selected = (_purchaseData.Selected < _purchaseData.PurchaseRecords.Count - 1) ? 
                 _purchaseData.Selected + 1 : 0;
 
         public void ActionA()
         {
-            Log.Information("BtnA was pressed");
-            if (IsLastRow())
-            {
-                ResetPhase();
-                return;
-            }
-
             Buy((ResourceType)_purchaseData.Selected);
         }
 
         public void ActionB()
         {
-            if (IsLastRow())
-            {
-                CompletePhase();
-                return;
-            }
-
             Sell((ResourceType)_purchaseData.Selected);
-        }
-
-        public void ResetPhase()
-        {
-            App.LogPanelViewModel.Add($"{_active.Name}: bought {string.Join(", ", _purchaseData.PurchaseRecords)} with {_purchaseData.Total} electra");
-            _purchaseData = new();
-            PurchaseUpdated?.Invoke(_purchaseData);
         }
 
         public void CompletePhase()
         {
-            ResetPhase();
             PlayerManager.Instance.SetPlayerState(_active, PlayerState.Done);
             _completedTcs.SetResult(true);
         }
-
-        private bool IsLastRow() => _purchaseData.Selected == _purchaseData.PurchaseRecords.Count;
 
         public void HandleButtonPressed(Player player, Button btn)
         {
@@ -102,10 +89,10 @@ namespace gui.Model.Phases.ResourceBuyingPhase
         {
             InfoManager.Instance.PhaseName = "Buy Resources";
             InfoManager.Instance.PlayerName = _active.Name;
-            InfoManager.Instance.OptionA = "+1/Ready";
-            InfoManager.Instance.OptionB = "-1/Done";
-            InfoManager.Instance.OptionC = "Up";
-            InfoManager.Instance.OptionD = "Down";
+            InfoManager.Instance.OptionA = "+1";
+            InfoManager.Instance.OptionB = "-1";
+            InfoManager.Instance.OptionC = "Next";
+            InfoManager.Instance.OptionD = "Done";
         }
         
         public void UpdatePurchaseRecord(ResourceType type, int amount)
@@ -119,11 +106,11 @@ namespace gui.Model.Phases.ResourceBuyingPhase
 
         private void Sell(ResourceType type)
         {
-            if (_purchaseData.PurchaseRecords[(int)type] == 0)
+            if (_purchaseData.PurchaseRecords[type] == 0)
                 return;
 
             _purchaseData.Total -= MarketManager.Instance.Sell(type);
-            _purchaseData.PurchaseRecords[(int)type]--;
+            _purchaseData.PurchaseRecords[type]--;
         }
 
         private void Buy(ResourceType type) 
@@ -132,7 +119,7 @@ namespace gui.Model.Phases.ResourceBuyingPhase
                 return;
 
             _purchaseData.Total += MarketManager.Instance.Buy(type);
-            _purchaseData.PurchaseRecords[(int)type]++;
+            _purchaseData.PurchaseRecords[type]++;
         }
     }
 }

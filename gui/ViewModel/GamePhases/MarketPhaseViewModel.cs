@@ -14,8 +14,7 @@ namespace gui.ViewModel.GamePhases
 {
     public class MarketPhaseViewModel : ViewModelBase
     {
-        public ObservableCollection<ResourceRowViewModel> Resources { get; }
-        public ICommand ReadyCommand { get; }
+        public ObservableCollection<ResourceRowViewModel> Resources { get; } = new ObservableCollection<ResourceRowViewModel>();
         public ICommand DoneCommand { get; }
         
         private ImageSource? _arrowSource;
@@ -32,28 +31,32 @@ namespace gui.ViewModel.GamePhases
             }
         }
 
+        private int _total;
+        public int Total
+        {
+            get => _total;
+            set
+            {
+                if (_total != value)
+                {
+                    _total = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+
         public MarketPhaseViewModel()
         {
             Log.Information("Initializing MarketPhaseViewModel...");
 
             GameManager.Instance.PurchaseRecordUpdated += OnPurchaseRecordUpdated;
 
-            Resources = new ObservableCollection<ResourceRowViewModel>(
-                ListUtils.EnumToList<ResourceType, ResourceRowViewModel>(type => new ResourceRowViewModel(type)));
-
-            ReadyCommand = new RelayCommand(_ => Ready());
             DoneCommand = new RelayCommand(_ => Done());
 
             Log.Information("MarketPhaseViewModel initialized successfully with {ResourceCount} resources", Resources.Count);
 
             ArrowSource = new BitmapImage(new Uri("pack://application:,,,/Assets/Images/empty.png")); // Default empty
-            Resources[0].SetSelected(true);
-        }
-
-        private void Ready()
-        {
-            Log.Information("Ready button pressed");
-            GameManager.Instance.Ready();
         }
 
         private void Done()
@@ -68,17 +71,28 @@ namespace gui.ViewModel.GamePhases
 
             System.Windows.Application.Current.Dispatcher.Invoke(() =>
             {
-                Resources.Zip(purchaseData.PurchaseRecords, (resource, quantity) => (resource, quantity))
-                         .ToList()
-                         .ForEach(pair =>
-                         {
-                             Log.Information("Updating {ResourceType}: {OldQuantity} → {NewQuantity}",
-                                             pair.resource.ResourceType, pair.resource.Quantity, pair.quantity);
-                             pair.resource.Quantity = pair.quantity;
-                         });
+                if (Resources.Count == 0)
+                {
+                    foreach (var resourceType in purchaseData.PurchaseRecords.Keys.OrderBy(r => (int)r))
+                        Resources.Add(new ResourceRowViewModel(resourceType));
+                }
 
-                Resources.ToList().ForEach(resource => resource.SetSelected(Resources.IndexOf(resource) == purchaseData.Selected));
+                foreach (var row in Resources)
+                {
+                    if (purchaseData.PurchaseRecords.TryGetValue(row.ResourceType, out int qty))
+                    {
+                        Log.Information("Updating {ResourceType}: {OldQuantity} → {NewQuantity}",
+                                        row.ResourceType, row.Quantity, qty);
+                        row.Quantity = qty;
+                    }
+                }
+
+                Resources.ToList().ForEach(resource =>
+                    resource.SetSelected(Resources.IndexOf(resource) == purchaseData.Selected));
+
                 SetSelected(purchaseData.Selected == Resources.Count);
+
+                Total = purchaseData.Total;
             });
         }
 

@@ -7,8 +7,11 @@ namespace gui.Model.Managers.PlayerManager
     public class Clock
     {
         private readonly Timer _timer;
+        private Timer? _delayTimer; // nullable so we know if delay is active
         private DateTime _startTime;
         private TimeSpan _elapsed;
+
+        private bool _isDelaying;
 
         public TimeSpan TimePassed
         { 
@@ -23,6 +26,8 @@ namespace gui.Model.Managers.PlayerManager
             }
         }
 
+        public bool IsDelaying => _isDelaying;
+
         public event EventHandler? TimePassedChanged;
 
         public Clock()
@@ -35,7 +40,7 @@ namespace gui.Model.Managers.PlayerManager
 
         public void Start()
         {
-            if (!_timer.Enabled)
+            if (!_timer.Enabled && !_isDelaying)
             {
                 _startTime = DateTime.Now;
                 _timer.Start();
@@ -44,6 +49,14 @@ namespace gui.Model.Managers.PlayerManager
 
         public void Stop()
         {
+            if (_isDelaying)
+            {
+                _delayTimer?.Stop();
+                _delayTimer?.Dispose();
+                _delayTimer = null;
+                _isDelaying = false;
+            }
+
             if (_timer.Enabled)
             {
                 _timer.Stop();
@@ -59,7 +72,7 @@ namespace gui.Model.Managers.PlayerManager
 
         public void ChangeState()
         {
-            if (_timer.Enabled)
+            if (_timer.Enabled || _isDelaying)
             {
                 Stop();
             }
@@ -82,5 +95,25 @@ namespace gui.Model.Managers.PlayerManager
                 _startTime = DateTime.Now; // Reset the start time for the next tick
             }
         }
+
+        public void StartWithDelay(int delaySeconds = 20)
+        {
+            if (_timer.Enabled || _isDelaying)
+                return;
+
+            _isDelaying = true;
+
+            _delayTimer = new Timer(delaySeconds * 1000) { AutoReset = false };
+            _delayTimer.Elapsed += (_, _) =>
+            {
+                _isDelaying = false;
+                _delayTimer?.Dispose();
+                _delayTimer = null;
+
+                Start();
+            };
+            _delayTimer.Start();
+        }
+
     }
 }

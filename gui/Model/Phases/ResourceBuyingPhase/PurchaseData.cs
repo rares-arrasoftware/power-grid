@@ -12,7 +12,6 @@ namespace gui.Model.Phases.ResourceBuyingPhase
     {
         public int Selected = 0;
         public int Total = 0;
-        public List<int> PurchaseRecords =
-            ListUtils.EnumToList<ResourceType, int>(_ => 0);
+        public Dictionary<ResourceType, int> PurchaseRecords = [];
     }
 }

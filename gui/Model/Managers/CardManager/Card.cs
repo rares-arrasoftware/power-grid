@@ -24,6 +24,7 @@ namespace gui.Model.Managers.CardManager
         // PowerPlant specific
         public bool Plus { get; set; } = false;
         public bool EndsTurn { get; set; } = false;
+        public List<bool> SupportedResources { get; set; } = ListUtils.EnumToList<ResourceType, bool>(_ => false);
 
         // Event specific
         public bool Level3 { get; set; } = false;

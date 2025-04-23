@@ -75,11 +75,6 @@ namespace gui.Model
 
         public void Ready()
         {
-            if (CurrentPhase is ResourceBuyingPhase phase)
-            {
-                Log.Information($"Ready purchase {CurrentPhase}");
-                phase.ReadyPurchase();
-            }
             if (CurrentPhase is CityBuildingPhase buildPhase)
             {
                 Log.Information($" Ready build {CurrentPhase}");

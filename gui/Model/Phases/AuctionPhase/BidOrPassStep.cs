@@ -19,7 +19,7 @@ namespace gui.Model.Phases.AuctionPhase
         public override async Task<Step?> Execute()
         {
             if(_ctx.Participants.Count == 1) 
-                return new ThrowCardStep(_ctx);
+                return new ResolveWinnerStep(_ctx);
 
             foreach (var p in _ctx.Participants)
             {
@@ -62,13 +62,12 @@ namespace gui.Model.Phases.AuctionPhase
             {
                 _ctx.DonePlayers.AddRange(_ctx.Participants);
                 _ctx.SpecialAuctionRequest.Clear();
-                _stepCompletion.TrySetResult( new StartAuctionStep(_ctx));
+                _stepCompletion.TrySetResult(new StartAuctionStep(_ctx));
                 return;
             }
 
             _ctx.Participants = PlayerManager.Instance.GetPlayersByState(PlayerState.Ready);
-            _stepCompletion.TrySetResult(
-                readyCount > 1 ? new SubmitBidStep(_ctx) : new ResolveWinnerStep(_ctx));
+            _stepCompletion.TrySetResult(new ResolveWinnerStep(_ctx));
         }
 
         public void UpdateInfo()
