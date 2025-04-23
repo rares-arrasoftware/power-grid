@@ -2,9 +2,7 @@
 using gui.Model.Managers.MarketManager;
 using gui.Model.Managers.PlayerManager;
 using gui.Model.Managers.RemoteManager;
-using gui.Model.Utils;
 using Serilog;
-using System.Xml.Linq;
 using static gui.Model.Managers.PlayerManager.Status;
 
 namespace gui.Model.Phases.ResourceBuyingPhase
@@ -52,9 +50,13 @@ namespace gui.Model.Phases.ResourceBuyingPhase
 
         public async Task Run() => await _completedTcs.Task;
 
-        public void Next() => 
-            _purchaseData.Selected = (_purchaseData.Selected < _purchaseData.PurchaseRecords.Count - 1) ? 
+        public void Next()
+        {
+            _purchaseData.Selected = (_purchaseData.Selected < _purchaseData.PurchaseRecords.Count - 1) ?
                 _purchaseData.Selected + 1 : 0;
+            PurchaseUpdated?.Invoke(_purchaseData);
+        } 
+            
 
         public void ActionA()
         {
@@ -81,7 +83,6 @@ namespace gui.Model.Phases.ResourceBuyingPhase
             if (_buttonActions.TryGetValue(btn, out var action))
             {
                 action.Invoke();
-                PurchaseUpdated?.Invoke(_purchaseData);
             }
         }
 
@@ -100,8 +101,6 @@ namespace gui.Model.Phases.ResourceBuyingPhase
             Log.Information("{ResourceType} {Amount}", type, amount);
 
             (amount < 0 ? (Action<ResourceType>)Sell : Buy).Invoke(type);
-
-            PurchaseUpdated?.Invoke(_purchaseData);
         }
 
         private void Sell(ResourceType type)
@@ -111,6 +110,7 @@ namespace gui.Model.Phases.ResourceBuyingPhase
 
             _purchaseData.Total -= MarketManager.Instance.Sell(type);
             _purchaseData.PurchaseRecords[type]--;
+            PurchaseUpdated?.Invoke(_purchaseData);
         }
 
         private void Buy(ResourceType type) 
@@ -120,6 +120,7 @@ namespace gui.Model.Phases.ResourceBuyingPhase
 
             _purchaseData.Total += MarketManager.Instance.Buy(type);
             _purchaseData.PurchaseRecords[type]++;
+            PurchaseUpdated?.Invoke(_purchaseData);
         }
     }
 }

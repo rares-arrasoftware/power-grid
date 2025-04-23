@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using gui.Model.Managers.CardManager;
+﻿using gui.Model.Managers.CardManager;
 using gui.Model.Managers.InfoManager;
 using gui.Model.Managers.PlayerManager;
 using gui.Model.Managers.RemoteManager;
 using Serilog;
+using System.Numerics;
 using static gui.Model.Managers.PlayerManager.Status;
 
 namespace gui.Model.Phases.AuctionPhase
@@ -20,8 +15,14 @@ namespace gui.Model.Phases.AuctionPhase
             _ctx.Participants.ForEach(p => p.Status.State = PlayerState.Ready);
             Log.Information("{PlayersCount} players to act.", _ctx.Participants.Count);
 
-            if (_ctx.Participants.Count <= 1)
+            if (_ctx.Participants.Count == 0)
             {
+                return new ThrowCardStep(_ctx);
+            }
+
+            if (_ctx.Participants.Count == 1)
+            {
+                PlayerManager.Instance.SetPlayerState(_ctx.Participants.First(), PlayerState.Active);
                 return new ThrowCardStep(_ctx);
             }
 
@@ -37,6 +38,15 @@ namespace gui.Model.Phases.AuctionPhase
 
             if (btn != Button.BtnD)
                 return;
+
+            PlayerManager.Instance.SetPlayerState(player, PlayerState.Active);
+            _ctx.Participants = PlayerManager.Instance.GetPlayersByState(PlayerState.Active);
+
+            if(_ctx.Card != null && _ctx.Card.EndsTurn)
+            {
+                _ctx.DonePlayers.AddRange(
+                    _ctx.Participants.Where(p => p.Status.State == PlayerState.Ready));
+            }
 
             _stepCompletion.TrySetResult(new ThrowCardStep(_ctx));
         }

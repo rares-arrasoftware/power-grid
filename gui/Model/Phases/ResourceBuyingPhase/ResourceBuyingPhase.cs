@@ -21,22 +21,23 @@ namespace gui.Model.Phases.ResourceBuyingPhase
         public override async Task Execute()
         {
             if (GameManager.Instance.IsRound(1))
-            {
                 PlayerManager.Instance.Reorder();
-            }
 
             Log.Information("Running: ResourceBuyingPhase");
-            var players = new Stack<Player>(PlayerManager.Instance.GetPlayers());
 
+            var players = new Stack<Player>(PlayerManager.Instance.GetPlayers());
             while (players.Count > 0)
             {
                 var player = players.Pop();
                 _buyStep = new BuyStep(player);
-                RemoteManager.Instance.ButtonPressed += _buyStep.HandleButtonPressed;
+
+                // hook up
                 _buyStep.PurchaseUpdated += OnPurchaseUpdated;
+                RemoteManager.Instance.ButtonPressed += _buyStep.HandleButtonPressed;
                 _buyStep.Init();
                 await _buyStep.Run();
                 RemoteManager.Instance.ButtonPressed -= _buyStep.HandleButtonPressed;
+                _buyStep.PurchaseUpdated -= OnPurchaseUpdated;
             }
         }
 
