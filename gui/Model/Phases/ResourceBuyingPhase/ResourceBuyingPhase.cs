@@ -29,6 +29,7 @@ namespace gui.Model.Phases.ResourceBuyingPhase
                 _buyStep = new BuyStep(player);
                 RemoteManager.Instance.ButtonPressed += _buyStep.HandleButtonPressed;
                 _buyStep.PurchaseUpdated += OnPurchaseUpdated;
+                _buyStep.Init();
                 await _buyStep.Run();
                 RemoteManager.Instance.ButtonPressed -= _buyStep.HandleButtonPressed;
             }
@@ -48,12 +49,6 @@ namespace gui.Model.Phases.ResourceBuyingPhase
         {
             Log.Information("DonePurchase"); 
             _buyStep?.CompletePhase();
-        }
-
-        public void ReadyPurchase()
-        {
-            Log.Information("ReadyPurchase");
-            _buyStep?.ResetPhase();
         }
     }
 }

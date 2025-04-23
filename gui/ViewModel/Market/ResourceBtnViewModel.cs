@@ -54,8 +54,7 @@ namespace gui.ViewModel.Market
             System.Windows.Application.Current.Dispatcher.Invoke(() =>
             {
                 ResourceImage = new BitmapImage(uri);
-            });
-            
+            });  
         }
 
         // 5. Private Methods

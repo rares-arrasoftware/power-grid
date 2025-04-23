@@ -133,7 +133,7 @@ namespace gui.Model.Managers.PlayerManager
             }
             if (state == PlayerState.Active)
             {
-                player.Clock.Start();
+                player.Clock.StartWithDelay();
             }
             player.Status.State = state;
         }

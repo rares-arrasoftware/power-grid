@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using gui.Model.Managers.CardManager;
@@ -14,21 +15,15 @@ namespace gui.Model.Phases.AuctionPhase
 {
     public class ResolveWinnerStep(AuctionContext ctx) : Step(ctx)
     {
-        // Dictionary for button handling
-        private readonly Dictionary<Button, Action<Player>> _buttonActions = new()
-        {
-            { Button.BtnA, p => PlayerManager.Instance.SetPlayerState(p, PlayerState.Ready) },
-            { Button.BtnB, p => PlayerManager.Instance.SetPlayerState(p, PlayerState.Wait) }
-        };
-
         public override async Task<Step?> Execute()
         {
-            _ctx.Participants.ForEach(p => p.Status.State = PlayerState.Active);
+            _ctx.Participants.ForEach(p => p.Status.State = PlayerState.Ready);
             Log.Information("{PlayersCount} players to act.", _ctx.Participants.Count);
 
             if (_ctx.Participants.Count <= 1)
             {
-                return new ThrowCardStep(_ctx);
+                AssignWinner(_ctx.Participants.First());
+                return new StartAuctionStep(_ctx);
             }
 
             UpdateInfo();
@@ -38,35 +33,44 @@ namespace gui.Model.Phases.AuctionPhase
 
         public override void HandleButtonPressed(Player player, Button btn)
         {
-            if (player is not { Status.State: PlayerState.Active })
+            if (player is not { Status.State: PlayerState.Ready })
                 return;
 
-            // Handle button action
-            if (_buttonActions.TryGetValue(btn, out var action))
-                action(player);
+            if (btn == Button.BtnD)
+                AssignWinner(player);
 
-            UpdateInfo();
-
-            if (PlayerManager.Instance.CountByState(PlayerState.Active) > 0)
-                return;
-                
-            // prepare for next step
-            int readyCount = PlayerManager.Instance.CountByState(PlayerState.Ready);
-            _ctx.Participants = PlayerManager.Instance.GetPlayersByState(PlayerState.Ready);
-
-            _stepCompletion.TrySetResult(
-                readyCount > 1 ? new SubmitBidStep(_ctx) : new ThrowCardStep(_ctx));
-
+            _stepCompletion.TrySetResult(new StartAuctionStep(_ctx));
         }
 
         public void UpdateInfo()
         {
             InfoManager.Instance.PhaseName = "Auction: Winner";
-            InfoManager.Instance.PlayerName = $"{PlayerManager.Instance.CountByState(PlayerState.Active)} Players";
-            InfoManager.Instance.OptionA = "I've Won/Tie";
-            InfoManager.Instance.OptionB = "I've Lost";
+            InfoManager.Instance.PlayerName = $"{PlayerManager.Instance.CountByState(PlayerState.Ready)} Players";
+            InfoManager.Instance.OptionA = "N/A";
+            InfoManager.Instance.OptionB = "N/A";
             InfoManager.Instance.OptionC = "SpecialAuction";
-            InfoManager.Instance.OptionD = "N/A";
+            InfoManager.Instance.OptionD = "Winner";
+        }
+
+        void AssignWinner(Player player)
+        {
+            if (_ctx.Card == null) 
+                return;
+            
+            // Assign Card
+            CardManager.Instance.AssignCard(player, _ctx.Card);
+
+            // Utility Card
+            if(_ctx.Card.Type == CardType.Utility)
+            {
+                if (_ctx.Card.Bureaucrat)
+                    PlayerManager.Instance.ApplyBureaucrat();
+                return;
+            }
+            
+            // Power Plant Card
+            PlayerManager.Instance.SetPlayerState(player, PlayerState.Done);
+            _ctx.DonePlayers.Add(player);
         }
 
         public override void HandleNewCardScanned(Card card)

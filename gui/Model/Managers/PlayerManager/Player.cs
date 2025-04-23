@@ -4,7 +4,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using gui.Model.Managers.CardManager;
-using static gui.Model.Managers.PlayerManager.Status;
+using gui.Model.Managers.MarketManager;
 
 namespace gui.Model.Managers.PlayerManager
 {
@@ -127,6 +127,17 @@ namespace gui.Model.Managers.PlayerManager
             if(CitiesCount > 0)
                 App.LogPanelViewModel.Add($"{Name}: destroyed one city");
                 CitiesCount--;
+        }
+
+        public List<ResourceType> SupportedResources()
+        {
+            return [.. Cards
+                .SelectMany(card => card.SupportedResources
+                    .Select((hasResource, index) => new { hasResource, index })
+                    .Where(x => x.hasResource)
+                    .Select(x => (ResourceType)x.index))
+                .Distinct()
+                .OrderBy(r => (int)r)];
         }
     }
 

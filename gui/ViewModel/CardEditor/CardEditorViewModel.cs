@@ -25,6 +25,9 @@ namespace gui.ViewModel.CardEditor
         private bool _level3 = false;
         private int _marketEffectLowest = 0;
 
+        public List<CardResourceBtnViewModel> ResourceButtons { get; } = 
+            ListUtils.EnumToList<ResourceType, CardResourceBtnViewModel>(type => new CardResourceBtnViewModel(type));
+
         private BitmapImage? _cardImage;
 
         public CardEditorViewModel()
@@ -167,7 +170,8 @@ namespace gui.ViewModel.CardEditor
                 Bureaucrat = Bureaucrat,
                 Level3 = Level3,
                 MarketEffect = [.. MarketEffect],
-                MarketEffectLowest = MarketEffectLowest
+                MarketEffectLowest = MarketEffectLowest,
+                SupportedResources = ResourceButtons.Select(btn => btn.Filled).ToList()
             };
 
             // Add the card to CardManager
@@ -196,7 +200,6 @@ namespace gui.ViewModel.CardEditor
 
             return imagePath;
         }
-
 
         private void ConvertToPng(string inputPath, string outputPath)
         {
