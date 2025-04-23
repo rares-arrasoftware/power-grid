@@ -9,6 +9,5 @@ namespace gui.Model.Phases
     public abstract class Phase
     {
         public abstract Task Execute();
-
     }
 }

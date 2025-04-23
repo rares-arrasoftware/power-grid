@@ -139,6 +139,11 @@ namespace gui.Model.Managers.PlayerManager
                 .Distinct()
                 .OrderBy(r => (int)r)];
         }
+
+        public int CountPowerPlantCards()
+        {
+            return Cards.Count(card => card.Type == CardType.PowerPlant);
+        }
     }
 
     /// <summary>

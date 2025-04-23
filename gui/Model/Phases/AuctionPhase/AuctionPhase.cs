@@ -6,7 +6,7 @@ namespace gui.Model.Phases.AuctionPhase
 {
     public class AuctionPhase() : Phase
     {
-        private readonly AuctionContext _ctx = new();
+        private AuctionContext _ctx = new();
 
         public override Task Execute()
         {
