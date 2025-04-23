@@ -22,8 +22,7 @@ namespace gui.Model.Phases.AuctionPhase
 
             if (_ctx.Participants.Count <= 1)
             {
-                AssignWinner(_ctx.Participants.First());
-                return new StartAuctionStep(_ctx);
+                return new ThrowCardStep(_ctx);
             }
 
             UpdateInfo();
@@ -36,10 +35,10 @@ namespace gui.Model.Phases.AuctionPhase
             if (player is not { Status.State: PlayerState.Ready })
                 return;
 
-            if (btn == Button.BtnD)
-                AssignWinner(player);
+            if (btn != Button.BtnD)
+                return;
 
-            _stepCompletion.TrySetResult(new StartAuctionStep(_ctx));
+            _stepCompletion.TrySetResult(new ThrowCardStep(_ctx));
         }
 
         public void UpdateInfo()
@@ -50,27 +49,6 @@ namespace gui.Model.Phases.AuctionPhase
             InfoManager.Instance.OptionB = "N/A";
             InfoManager.Instance.OptionC = "SpecialAuction";
             InfoManager.Instance.OptionD = "Winner";
-        }
-
-        void AssignWinner(Player player)
-        {
-            if (_ctx.Card == null) 
-                return;
-            
-            // Assign Card
-            CardManager.Instance.AssignCard(player, _ctx.Card);
-
-            // Utility Card
-            if(_ctx.Card.Type == CardType.Utility)
-            {
-                if (_ctx.Card.Bureaucrat)
-                    PlayerManager.Instance.ApplyBureaucrat();
-                return;
-            }
-            
-            // Power Plant Card
-            PlayerManager.Instance.SetPlayerState(player, PlayerState.Done);
-            _ctx.DonePlayers.Add(player);
         }
 
         public override void HandleNewCardScanned(Card card)

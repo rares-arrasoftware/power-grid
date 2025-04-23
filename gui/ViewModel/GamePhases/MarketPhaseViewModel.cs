@@ -14,7 +14,7 @@ namespace gui.ViewModel.GamePhases
 {
     public class MarketPhaseViewModel : ViewModelBase
     {
-        public ObservableCollection<ResourceRowViewModel> Resources { get; } = new ObservableCollection<ResourceRowViewModel>();
+        public ObservableCollection<ResourceRowViewModel> Resources { get; } = [];
         public ICommand DoneCommand { get; }
         
         private ImageSource? _arrowSource;
@@ -71,11 +71,10 @@ namespace gui.ViewModel.GamePhases
 
             System.Windows.Application.Current.Dispatcher.Invoke(() =>
             {
-                if (Resources.Count == 0)
-                {
-                    foreach (var resourceType in purchaseData.PurchaseRecords.Keys.OrderBy(r => (int)r))
-                        Resources.Add(new ResourceRowViewModel(resourceType));
-                }
+                Resources.Clear();
+
+                foreach (var resourceType in purchaseData.PurchaseRecords.Keys.OrderBy(r => (int)r))
+                    Resources.Add(new ResourceRowViewModel(resourceType));
 
                 foreach (var row in Resources)
                 {
@@ -95,6 +94,7 @@ namespace gui.ViewModel.GamePhases
                 Total = purchaseData.Total;
             });
         }
+
 
         public void SetSelected(bool isSelected)
         {

@@ -129,5 +129,10 @@ namespace gui.Model
             PlayerManager.Instance.Players.Clear();
             LoadPlayersFromCsv();
         }
+
+        public bool IsRound(int round)
+        {
+            return _rounds.Count == round;
+        }
     }
 }

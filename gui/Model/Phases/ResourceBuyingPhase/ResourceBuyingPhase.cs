@@ -20,6 +20,11 @@ namespace gui.Model.Phases.ResourceBuyingPhase
 
         public override async Task Execute()
         {
+            if (GameManager.Instance.IsRound(1))
+            {
+                PlayerManager.Instance.Reorder();
+            }
+
             Log.Information("Running: ResourceBuyingPhase");
             var players = new Stack<Player>(PlayerManager.Instance.GetPlayers());
 

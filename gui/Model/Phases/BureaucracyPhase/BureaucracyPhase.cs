@@ -37,6 +37,8 @@ namespace gui.Model.Phases.BureaucracyPhase
                 ResupplyManager.Instance.Level = 3;
             }
 
+            PlayerManager.Instance.Reorder();
+
             return Task.CompletedTask;
         }
 
