@@ -4,6 +4,8 @@ using gui.Model.Managers.RemoteManager;
 using gui.Model.Phases.ResourceBuyingPhase;
 using Serilog;
 using System;
+using System.IO;
+using System.Media;
 using System.Numerics;
 using static gui.Model.Managers.PlayerManager.Status;
 
@@ -62,6 +64,12 @@ namespace gui.Model.Phases.CityBuildingPhase
 
             while (_players.Count > 0)
             {
+                var path = Path.Combine(AppContext.BaseDirectory, "Assets", "Sounds", "attention.wav");
+                using (var media = new SoundPlayer(path))
+                {
+                    media.Play(); // or PlaySync() if you want to block
+                }
+
                 _nextTcs = new TaskCompletionSource<bool>();
                 _active = _players.Pop();
                 PlayerManager.Instance.SetPlayerState(_active, PlayerState.Active);

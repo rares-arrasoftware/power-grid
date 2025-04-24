@@ -92,4 +92,10 @@
     </Page>
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Assets\Sounds\attention.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+  </ItemGroup>
+
 </Project>

@@ -6,7 +6,9 @@ using Serilog;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,6 +30,13 @@ namespace gui.Model.Phases.ResourceBuyingPhase
             var players = new Stack<Player>(PlayerManager.Instance.GetPlayers());
             while (players.Count > 0)
             {
+                var path = Path.Combine(AppContext.BaseDirectory, "Assets", "Sounds", "attention.wav");
+                using (var media = new SoundPlayer(path))
+                {
+                    media.Play(); // or PlaySync() if you want to block
+                }
+
+
                 var player = players.Pop();
                 _buyStep = new BuyStep(player);
 
