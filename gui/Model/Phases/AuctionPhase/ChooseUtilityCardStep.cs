@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using gui.Model.Managers.CardManager;
@@ -19,6 +21,13 @@ namespace gui.Model.Phases.AuctionPhase
             _ctx.Participants.ForEach(p => PlayerManager.Instance.SetPlayerState(p, PlayerState.Wait));
             Player player = _ctx.SpecialAuctionRequest.Dequeue();
             PlayerManager.Instance.SetPlayerState(player, PlayerState.Active);
+
+            var path = Path.Combine(AppContext.BaseDirectory, "Assets", "Sounds", "attention.wav");
+            using (var media = new SoundPlayer(path))
+            {
+                media.Play(); // or PlaySync() if you want to block
+            }
+
 
             UpdateInfo(player);
 

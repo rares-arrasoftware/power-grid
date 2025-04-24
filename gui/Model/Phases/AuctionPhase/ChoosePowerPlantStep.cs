@@ -3,6 +3,8 @@ using gui.Model.Managers.InfoManager;
 using gui.Model.Managers.PlayerManager;
 using gui.Model.Managers.RemoteManager;
 using Serilog;
+using System.IO;
+using System.Media;
 using System.Windows;
 using static gui.Model.Managers.PlayerManager.Status;
 
@@ -14,6 +16,13 @@ namespace gui.Model.Phases.AuctionPhase
         {
             if (_ctx.Participants.Count == 0) 
                 return null;
+
+            var path = Path.Combine(AppContext.BaseDirectory, "Assets", "Sounds", "attention.wav");
+            using (var media = new SoundPlayer(path))
+            {
+                media.Play(); // or PlaySync() if you want to block
+            }
+
 
             Log.Information("Participants count: {ParticipantsCount}", _ctx.Participants.Count);
 
