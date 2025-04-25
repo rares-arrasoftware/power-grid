@@ -90,6 +90,7 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
@@ -110,6 +111,9 @@
 
                         <TextBlock Text="Lowest:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
                         <TextBox Text="{Binding MarketEffectLowest}" Width="450" TextAlignment="Center" Grid.Row="4" Grid.Column="1"/>
+
+                        <TextBlock Text="Highest:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
+                        <TextBox Text="{Binding MarketEffectHighest}" Width="450" TextAlignment="Center" Grid.Row="5" Grid.Column="1"/>
                     </Grid>
                 </StackPanel>
             </Border>

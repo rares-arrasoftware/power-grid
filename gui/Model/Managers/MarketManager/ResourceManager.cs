@@ -46,6 +46,19 @@ namespace gui.Model.Managers.MarketManager
             return resource;
         }
 
+        public ResourceType GetMostAvailableResourceType()
+        {
+            ResourceType resource = _empty
+                .Select((list, index) => new { ResourceType = (ResourceType)index, list.Count })
+                .OrderBy(r => r.Count)
+                .First().ResourceType;
+
+            Log.Information($"Most available resource: {resource}");
+
+            return resource;
+        }
+
+
         public IReadOnlyDictionary<int, PriceTier> GetPriceTiers()
         {
             Dictionary<int, PriceTier> result = [];

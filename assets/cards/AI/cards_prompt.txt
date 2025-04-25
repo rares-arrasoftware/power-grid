@@ -1,0 +1,107 @@
+Good question.
+
+I can absolutely create all prompts directly, but if you're going for a nuanced progression—where **level 3 isn’t just "slightly more stuff than level 2"**, but maybe shows **evolution in technology, layout, scale, lighting, or tone**—then giving me **level 1 and level 7** manually as anchor points is great.
+
+However, since we already agreed on style and tone, and you seem to trust my sense of progression and visual storytelling, I’d say:
+
+👉 **Let me try creating all prompts for all 7 resource types, levels 1–7**, in a consistent tone, with escalating complexity.
+
+Then if anything feels off or inconsistent, you can just say “Level 4 garbage feels too advanced” or “Wind should look cleaner overall,” and I can tweak.
+
+---
+
+I'll proceed to write all **49 prompts** now (7 resources × 7 levels) using the unified format, increasing visual and technological complexity step-by-step.
+
+Give me a sec.
+
+Here we go. Each of the 49 prompts follows this structure:
+
+> _“A stylized card design for a power plant, powered by [RESOURCE], LEVEL [X] of 7, consistent industrial style, muted palette with [COLOR], 3/4 isometric view, detailed environment, complexity level [X], unified design with other power plants, concept art, board game art style”_
+
+---
+
+### 🟫 COAL
+
+1. **Level 1** – Small coal-burning shack, one pipe, light black dust.
+2. **Level 2** – Slightly larger, twin chimneys, open coal cart.
+3. **Level 3** – Factory with conveyor belt, tall thin smokestack.
+4. **Level 4** – Four chimneys, coal dump zone, darker smoke.
+5. **Level 5** – Rail system unloading coal, larger plant frame.
+6. **Level 6** – Multi-level structure, red hazard lights, heavy soot.
+7. **Level 7** – Massive coal complex, five towers, cranes, thick smoke clouds.
+
+---
+
+### ⚫ OIL
+
+1. **Level 1** – Tiny pumpjack, one barrel, light oil stain.
+2. **Level 2** – Pump station with a tank, slight flare stack.
+3. **Level 3** – Refinery with pipes and oil canisters.
+4. **Level 4** – Dual flare towers, tank farm with puddles.
+5. **Level 5** – Large refinery, truck-loading zone, orange glow.
+6. **Level 6** – Maze of pipes, burning stacks, oily haze.
+7. **Level 7** – Giant oil plant with cranes, tanks, six flare stacks.
+
+---
+
+### ⚫➕🟫 COAL + OIL
+
+1. **Level 1** – Split facility: small coal furnace and tiny oil pump.
+2. **Level 2** – Shared chimney, side-by-side storage tanks.
+3. **Level 3** – Hybrid plant with both dust and flame, dual conveyors.
+4. **Level 4** – Intertwined systems: coal chutes, oil tubes, two smokestacks.
+5. **Level 5** – Complex layout with fuel mixer, dual control rooms.
+6. **Level 6** – Giant boiler room, coal crane, oil valves, hazard signs.
+7. **Level 7** – Sprawling hybrid facility, multi-tower, shared fuel reactor.
+
+---
+
+### 🟩 GARBAGE
+
+1. **Level 1** – Trash pile with green goo, basic compactor.
+2. **Level 2** – Tiny incinerator with conveyor belt, flies buzzing.
+3. **Level 3** – Compost dome with chimneys and power lines.
+4. **Level 4** – Medium waste-to-energy plant, burning tanks, green haze.
+5. **Level 5** – Advanced sorters, plasma burner, sludge pipes.
+6. **Level 6** – Multi-stage process line, toxic barrels, dark green lighting.
+7. **Level 7** – Enormous bio-energy facility, robotic claws, glowing sludge pit.
+
+---
+
+### 🟩➕⚫ GARBAGE + OIL
+
+1. **Level 1** – Dirty hybrid: garbage pit with oil drum nearby.
+2. **Level 2** – Trash-fed burner with oily residue on pipes.
+3. **Level 3** – Twin furnaces, one for sludge, one for oil.
+4. **Level 4** – Blended fuel system, glowing oil tank beside trash heap.
+5. **Level 5** – Advanced incineration with dual resource feeders.
+6. **Level 6** – Large-scale hybrid plant, reactors glowing green-orange.
+7. **Level 7** – Monumental hybrid complex, waste silos, oil trucks, steam vents.
+
+---
+
+### ☢️ URANIUM
+
+1. **Level 1** – One reactor core, warning tape, green glowing rod inside.
+2. **Level 2** – Small containment dome, one cooling pipe, radiation sign.
+3. **Level 3** – Compact facility with blue-lit tower, steam leaks.
+4. **Level 4** – Large dome, twin towers, security fencing.
+5. **Level 5** – Enclosed reactor, three cooling stacks, red alarms.
+6. **Level 6** – Clean white facility with heavy shielding and hazmat crews.
+7. **Level 7** – High-tech nuclear complex, glowing blue core, massive cooling towers, sterile symmetry.
+
+---
+
+### 🌬️ WIND
+
+1. **Level 1** – One small wind turbine on grassy field, clear sky.
+2. **Level 2** – Two turbines on a hill, dirt road, sparse vegetation.
+3. **Level 3** – Group of four turbines, cloudy sky, control box.
+4. **Level 4** – Wind farm on ridgeline, sunset background, larger blades.
+5. **Level 5** – Off-grid station with monitoring hub, six turbines, birds flying.
+6. **Level 6** – Coastal platform with advanced windmills and signal tower.
+7. **Level 7** – Offshore mega-farm with 10+ turbines, energy lines, misty ocean backdrop.
+
+---
+
+Want them exported as a copy-pasteable `.txt`, JSON, or Markdown file for easy import or batch usage? Or should we generate a few test cards first?

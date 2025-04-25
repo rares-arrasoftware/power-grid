@@ -24,6 +24,7 @@ namespace gui.ViewModel.CardEditor
         private bool _bureaucrat = false;
         private bool _level3 = false;
         private int _marketEffectLowest = 0;
+        private int _marketEffectHighest = 0;
 
         public List<CardResourceBtnViewModel> ResourceButtons { get; } = 
             ListUtils.EnumToList<ResourceType, CardResourceBtnViewModel>(type => new CardResourceBtnViewModel(type));
@@ -107,6 +108,16 @@ namespace gui.ViewModel.CardEditor
             }
         }
 
+        public int MarketEffectHighest
+        {
+            get => _marketEffectHighest;
+            set
+            {
+                _marketEffectHighest = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ICommand SelectImageCommand => new RelayCommand(_ => SelectImage());
 
         private void SelectImage()
@@ -171,6 +182,7 @@ namespace gui.ViewModel.CardEditor
                 Level3 = Level3,
                 MarketEffect = [.. MarketEffect],
                 MarketEffectLowest = MarketEffectLowest,
+                MarketEffectHighest = MarketEffectHighest,
                 SupportedResources = ResourceButtons.Select(btn => btn.Filled).ToList()
             };
 

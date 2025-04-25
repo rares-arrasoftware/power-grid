@@ -36,6 +36,8 @@ namespace gui.Model.Managers.CardManager
         public List<int> MarketEffect { get; set; } = ListUtils.EnumToList<ResourceType, int>(_ => 0);
         public int MarketEffectLowest { get; set; } = 0;
 
+        public int MarketEffectHighest { get; set; } = 0;
+
         public override string ToString() => $"{Type} Card [ID: {Id}, Rank: {Rank}, Image: {ImagePath}]";
     }
 }

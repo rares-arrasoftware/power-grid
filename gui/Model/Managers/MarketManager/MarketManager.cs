@@ -60,7 +60,14 @@ namespace gui.Model.Managers.MarketManager
             var resourceType = _resourceManager.GetMostLimitedResourceType();
             Update(resourceType, quantity);
         }
-            
+
+
+        public void UpdateMostAvaialableResource(int quantity)
+        {
+            var resourceType = _resourceManager.GetMostAvailableResourceType();
+            Update(resourceType, quantity);
+        }
+
         public int Buy(ResourceType resourceType)
         {
             return _resourceManager.MoveToEmpty(resourceType);
