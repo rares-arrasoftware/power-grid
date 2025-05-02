@@ -55,18 +55,11 @@ namespace gui.Model.Phases.ResourceBuyingPhase
             _purchaseData.Selected = (_purchaseData.Selected < _purchaseData.PurchaseRecords.Count - 1) ?
                 _purchaseData.Selected + 1 : 0;
             PurchaseUpdated?.Invoke(_purchaseData);
-        } 
-            
-
-        public void ActionA()
-        {
-            Buy((ResourceType)_purchaseData.Selected);
         }
 
-        public void ActionB()
-        {
-            Sell((ResourceType)_purchaseData.Selected);
-        }
+        public void ActionA() => Buy(GetSelectedResource());
+
+        public void ActionB() => Sell(GetSelectedResource());
 
         public void CompletePhase()
         {
@@ -121,6 +114,11 @@ namespace gui.Model.Phases.ResourceBuyingPhase
             _purchaseData.Total += MarketManager.Instance.Buy(type);
             _purchaseData.PurchaseRecords[type]++;
             PurchaseUpdated?.Invoke(_purchaseData);
+        }
+
+        private ResourceType GetSelectedResource()
+        {
+            return _active.SupportedResources()[_purchaseData.Selected];
         }
     }
 }
