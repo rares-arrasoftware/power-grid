@@ -34,8 +34,8 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Total:" FontSize="40" Grid.Column="0"/>
-                <TextBlock Text="{Binding Total}" FontSize="40" Grid.Column="1"/>
+                <TextBlock Text="Total:" FontSize="80" Grid.Column="0"/>
+                <TextBlock Text="{Binding Total}" FontSize="80" Grid.Column="1"/>
 
             </Grid>
 

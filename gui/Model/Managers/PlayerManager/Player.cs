@@ -164,6 +164,9 @@ namespace gui.Model.Managers.PlayerManager
             result = (y.HighestCard()?.Rank ?? 0).CompareTo(x.HighestCard()?.Rank ?? 0);
             if (result != 0) return result;
 
+            result = (y.HighestCard()?.Plus == true).CompareTo(x.HighestCard()?.Plus == true);
+            if (result != 0) return result;
+
             return (y.LastRemovedCard?.Rank ?? 0).CompareTo(x.LastRemovedCard?.Rank ?? 0);
         }
     }

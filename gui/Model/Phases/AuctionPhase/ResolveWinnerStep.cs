@@ -40,13 +40,13 @@ namespace gui.Model.Phases.AuctionPhase
                 return;
 
             PlayerManager.Instance.SetPlayerState(player, PlayerState.Active);
-            _ctx.Participants = PlayerManager.Instance.GetPlayersByState(PlayerState.Active);
-
             if(_ctx.Card != null && _ctx.Card.EndsTurn)
             {
                 _ctx.DonePlayers.AddRange(
                     _ctx.Participants.Where(p => p.Status.State == PlayerState.Ready));
             }
+
+            _ctx.Participants = PlayerManager.Instance.GetPlayersByState(PlayerState.Active);
 
             _stepCompletion.TrySetResult(new ThrowCardStep(_ctx));
         }
