@@ -16,6 +16,9 @@
         <Grid.ContextMenu>
             <ContextMenu>
                 <MenuItem Header="Reload" Command="{Binding ReloadCommand}" />
+                <MenuItem Header="Level1" Command="{Binding Level1}" />
+                <MenuItem Header="Level2" Command="{Binding Level2}" />
+                <MenuItem Header="Level3" Command="{Binding Level3}" />
             </ContextMenu>
         </Grid.ContextMenu>
 

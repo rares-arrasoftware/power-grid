@@ -15,12 +15,22 @@ namespace gui.ViewModel.Resupply
         // Initialize ReloadCommand
         public ICommand ReloadCommand { get; }
 
+        public ICommand Level1 { get; }
+
+        public ICommand Level2 { get; }
+
+        public ICommand Level3 { get; }
+
+
         public ResupplyViewModel()
         {
             LoadSuppliesRows();
             ResupplyManager.Instance.LevelChanged += OnLevelChanged; // ✅ Subscribe only once
 
             ReloadCommand = new RelayCommand(_ => ReloadSupply());
+            Level1 = new RelayCommand(_ => ChangeLevel(1));
+            Level2 = new RelayCommand(_ => ChangeLevel(2));
+            Level3 = new RelayCommand(_ => ChangeLevel(3));
         }
 
         private void LoadSuppliesRows()
@@ -57,6 +67,11 @@ namespace gui.ViewModel.Resupply
 
             // Notify UI about changes
             OnPropertyChanged(nameof(SuppliesRows));
+        }
+
+        public void ChangeLevel(int level)
+        {
+            ResupplyManager.Instance.Level = level;
         }
     }
 }

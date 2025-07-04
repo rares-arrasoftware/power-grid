@@ -143,6 +143,3 @@ namespace gui.Model.Phases.CityBuildingPhase
         }
     }
 }
-
-    
-    

@@ -71,6 +71,11 @@ namespace gui.Model
                 Log.Information($"Done build {CurrentPhase}");
                 buildPhase.DoneBuild();
             }
+            if(CurrentPhase is BureaucracyPhase bureaucracyPhase)
+            {
+                Log.Information($"Done bureacracy {CurrentPhase}");
+                bureaucracyPhase.OnStartRoundPressed();
+            }
         }
 
         public void Ready()

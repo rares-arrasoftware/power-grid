@@ -36,7 +36,6 @@ namespace gui.Model.Phases.ResourceBuyingPhase
                     media.Play(); // or PlaySync() if you want to block
                 }
 
-
                 var player = players.Pop();
                 _buyStep = new BuyStep(player);
 

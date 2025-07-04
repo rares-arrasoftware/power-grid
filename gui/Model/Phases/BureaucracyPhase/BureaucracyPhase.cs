@@ -2,6 +2,7 @@
 using gui.Model.Managers.InfoManager;
 using gui.Model.Managers.MarketManager;
 using gui.Model.Managers.PlayerManager;
+using gui.Model.Managers.RemoteManager;
 using gui.Model.Managers.ResupplyManager;
 using Serilog;
 
@@ -9,13 +10,35 @@ namespace gui.Model.Phases.BureaucracyPhase
 {
     public class BureaucracyPhase : Phase
     {
-        public override Task Execute()
+        TaskCompletionSource<bool>? _tcs;
+
+        public override async Task Execute()
         {
             Log.Information("Bureaucracy Phase started.");
 
             Log.Information("Processing supply for Level {Level}.", ResupplyManager.Instance.Level);
 
+            _tcs = new TaskCompletionSource<bool>();
+
             UpdateInfo();
+            Log.Information("Running: BureaucracyPhase");
+
+            await _tcs.Task;
+        }
+
+        public void UpdateInfo()
+        {
+            InfoManager.Instance.PhaseName = "Bureaucracy";
+            InfoManager.Instance.PlayerName = "N/A";
+            InfoManager.Instance.OptionA = "N/A";
+            InfoManager.Instance.OptionB = "N/A";
+            InfoManager.Instance.OptionC = "N/A";
+            InfoManager.Instance.OptionD = "N/A";
+        }
+
+        public void OnStartRoundPressed()
+        {
+            Log.Information("Start Round Button pressed");
 
             Enum.GetValues(typeof(ResourceType))
                 .Cast<ResourceType>()
@@ -39,17 +62,7 @@ namespace gui.Model.Phases.BureaucracyPhase
 
             PlayerManager.Instance.Reorder();
 
-            return Task.CompletedTask;
-        }
-
-        public void UpdateInfo()
-        {
-            InfoManager.Instance.PhaseName = "Bureaucracy";
-            InfoManager.Instance.PlayerName = "N/A";
-            InfoManager.Instance.OptionA = "N/A";
-            InfoManager.Instance.OptionB = "N/A";
-            InfoManager.Instance.OptionC = "N/A";
-            InfoManager.Instance.OptionD = "N/A";
+            _tcs?.TrySetResult(true);
         }
     }
 }

@@ -116,6 +116,9 @@ namespace gui.Model
 
         public void Done()
         {
+            // ignore first start - there is no round
+            if (_rounds.Count == 0) return;
+            
             _rounds.Last().Done();
         }
 
