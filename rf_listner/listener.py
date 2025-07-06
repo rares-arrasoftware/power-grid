@@ -75,10 +75,25 @@ class RFListener:
         """Check if message should be sent based on timing and code"""
         return (current_time - self.last_sent_time >= self.config.send_interval) or (code != self.last_sent_code)
         
+    def should_ignore_rf_code(self, code: int, pulselength: int, protocol: int) -> bool:
+        """Return True to ignore invalid or noisy RF codes."""
+
+        is_valid_code = code < 0xFF
+
+        is_valid_pulse = (
+            (protocol == 3 and 145 < pulselength < 165) or
+            (protocol == 1 and 350 < pulselength < 370)
+        )
+
+        return not (is_valid_code and is_valid_pulse)
+
     def process_rf_code(self, code: int, pulselength: int, protocol: int) -> None:
         """Process received RF code and send if needed"""
         current_time = time.time()
         
+        if self.should_ignore_rf_code(code, pulselength, protocol):
+            return
+
         # Extract player ID and button from the code
         player_id = (code >> BUTTON_BITS) & 0x0F
         button = code & 0x0F
@@ -115,22 +130,25 @@ class RFListener:
             time.sleep(0.01)
 
 def setup_logging(config: Config) -> None:
-    """Configure logging with rotation"""
+    """Configure logging with rotation and preserve logs between runs."""
     log_dir = Path(config.log_file).parent
     log_dir.mkdir(parents=True, exist_ok=True)
-    
+
     handler = RotatingFileHandler(
         config.log_file,
         maxBytes=config.max_log_size,
         backupCount=config.backup_count
     )
-    
-    logging.basicConfig(
-        handlers=[handler],
-        level=logging.INFO,
-        datefmt='%Y-%m-%d %H:%M:%S',
-        format='%(asctime)-15s - [%(levelname)s] %(module)s: %(message)s'
+
+    formatter = logging.Formatter(
+        fmt='%(asctime)-15s - [%(levelname)s] %(module)s: %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
     )
+    handler.setFormatter(formatter)
+
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    logger.addHandler(handler)
 
 def parse_arguments() -> Config:
     """Parse command line arguments"""
